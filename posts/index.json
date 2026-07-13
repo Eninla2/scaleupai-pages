@@ -1,5 +1,23 @@
 [
   {
+    "title": "AI Documentation Generator",
+    "image": "https://images.pexels.com/photos/15635246/pexels-photo-15635246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-documentation-generator.html",
+    "date": "2026-07-13T16:22:06.423Z"
+  },
+  {
+    "title": "AI Management Software Debunked",
+    "image": "https://images.pexels.com/photos/6253568/pexels-photo-6253568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-management-software-debunked.html",
+    "date": "2026-07-13T16:21:54.034Z"
+  },
+  {
+    "title": "AI Side Hustles Uncovered",
+    "image": "https://images.pexels.com/photos/5899215/pexels-photo-5899215.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-side-hustles-uncovered.html",
+    "date": "2026-07-13T16:21:40.948Z"
+  },
+  {
     "title": "AI Management Software Debunked",
     "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783950054-IqfDgN.jpg",
     "page": "posts/ai-management-software-debunked.html",
@@ -280,23 +298,5 @@
     "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783902162-fqYzdl.jpg",
     "page": "posts/blockchain-in-banking-explained.html",
     "date": "2026-07-13T11:03:19.654Z"
-  },
-  {
-    "title": "AI Business Model Innovation Explained",
-    "image": "https://images.pexels.com/photos/19825314/pexels-photo-19825314.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/ai-business-model-innovation-explained.html",
-    "date": "2026-07-13T11:03:02.929Z"
-  },
-  {
-    "title": "Leonardo AI Review: Insights and Solutions",
-    "image": "https://images.pexels.com/photos/7947669/pexels-photo-7947669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/leonardo-ai-review-insights-and-solutions.html",
-    "date": "2026-07-13T11:02:52.783Z"
-  },
-  {
-    "title": "AI UX Design Tools Explained",
-    "image": "https://images.pexels.com/photos/414974/pexels-photo-414974.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/ai-ux-design-tools-explained.html",
-    "date": "2026-07-13T11:02:37.321Z"
   }
 ]
