@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ScaleUp AI — AI Tools & Resources</title>
+<meta name="description" content="Practical AI tools, remote job guides, and productivity resources for modern professionals.">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8f9fa;color:#1a1a1a}
+  header{background:#1a1a2e;color:#fff;padding:40px 20px;text-align:center}
+  header h1{font-size:2rem;margin-bottom:8px}
+  header p{opacity:.8;font-size:1.1rem}
+  main{max-width:900px;margin:40px auto;padding:0 20px}
+  h2{font-size:1.3rem;color:#555;margin-bottom:24px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px}
+  .card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08);transition:transform .2s}
+  .card:hover{transform:translateY(-4px)}
+  .card img{width:100%;height:180px;object-fit:cover}
+  .card-body{padding:16px}
+  .card-body h3{font-size:1rem;line-height:1.5;margin-bottom:8px}
+  .card-body a{display:inline-block;margin-top:12px;color:#4a90e2;font-weight:600;text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <h1>ScaleUp AI</h1>
+  <p>AI Tools, Remote Jobs & Productivity Resources</p>
+</header>
+<main>
+  <h2>Latest Articles</h2>
+  <div class="grid" id="posts"></div>
+</main>
+<script>
+  fetch('posts/index.json').then(r=>r.json()).then(posts=>{
+    const grid = document.getElementById('posts');
+    posts.forEach(p=>{
+      grid.innerHTML += `<div class="card">
+        <img src="${p.image}" alt="${p.title}" loading="lazy">
+        <div class="card-body">
+          <h3>${p.title}</h3>
+          <a href="${p.page}">Read Article →</a>
+        </div>
+      </div>`;
+    });
+  }).catch(()=>{
+    document.getElementById('posts').innerHTML='<p style="color:#888">No articles yet.</p>';
+  });
+</script>
+</body>
+</html>
