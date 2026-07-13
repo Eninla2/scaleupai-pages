@@ -1,302 +1,302 @@
 [
   {
+    "title": "AI Profitability Calculator Myths Debunked",
+    "image": "https://images.pexels.com/photos/36755617/pexels-photo-36755617.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-profitability-calculator-myths-debunked.html",
+    "date": "2026-07-13T16:37:07.404Z"
+  },
+  {
+    "title": "Blackbox AI Review: Quick Wins",
+    "image": "https://images.pexels.com/photos/33796884/pexels-photo-33796884.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/blackbox-ai-review-quick-wins.html",
+    "date": "2026-07-13T16:36:54.656Z"
+  },
+  {
+    "title": "Mastering AI Warehouse Automation",
+    "image": "https://images.pexels.com/photos/36522028/pexels-photo-36522028.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/mastering-ai-warehouse-automation.html",
+    "date": "2026-07-13T16:36:40.296Z"
+  },
+  {
+    "title": "AI API Automation Strategies",
+    "image": "https://images.pexels.com/photos/8438958/pexels-photo-8438958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-api-automation-strategies.html",
+    "date": "2026-07-13T16:36:24.192Z"
+  },
+  {
+    "title": "AI Performance Comparison Made Easy",
+    "image": "https://images.pexels.com/photos/32728405/pexels-photo-32728405.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-performance-comparison-made-easy.html",
+    "date": "2026-07-13T16:36:12.341Z"
+  },
+  {
+    "title": "Fintech APIs: Powering Digital Finance",
+    "image": "https://images.pexels.com/photos/4841737/pexels-photo-4841737.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/fintech-apis-powering-digital-finance.html",
+    "date": "2026-07-13T16:35:58.934Z"
+  },
+  {
+    "title": "Mastering Zero-Based Budgeting",
+    "image": "https://images.pexels.com/photos/38473088/pexels-photo-38473088.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/mastering-zero-based-budgeting.html",
+    "date": "2026-07-13T16:35:45.854Z"
+  },
+  {
+    "title": "AI Industry Trends to Watch",
+    "image": "https://images.pexels.com/photos/8250139/pexels-photo-8250139.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-industry-trends-to-watch.html",
+    "date": "2026-07-13T16:35:31.819Z"
+  },
+  {
+    "title": "AI Agile Tools: Advanced Strategies",
+    "image": "https://images.pexels.com/photos/6804077/pexels-photo-6804077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-agile-tools-advanced-strategies.html",
+    "date": "2026-07-13T16:35:12.134Z"
+  },
+  {
+    "title": "Scaling Business Strategies",
+    "image": "https://images.pexels.com/photos/6476797/pexels-photo-6476797.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/scaling-business-strategies.html",
+    "date": "2026-07-13T16:34:59.446Z"
+  },
+  {
+    "title": "AI Investment Portfolio Tips for Beginners",
+    "image": "https://images.pexels.com/photos/12220436/pexels-photo-12220436.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-investment-portfolio-tips-for-beginners.html",
+    "date": "2026-07-13T16:34:45.512Z"
+  },
+  {
+    "title": "Debunking AI Innovation Myths",
+    "image": "https://images.pexels.com/photos/19825314/pexels-photo-19825314.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/debunking-ai-innovation-myths.html",
+    "date": "2026-07-13T16:34:32.092Z"
+  },
+  {
+    "title": "AI Route Optimization Explained",
+    "image": "https://images.pexels.com/photos/12654945/pexels-photo-12654945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-route-optimization-explained.html",
+    "date": "2026-07-13T16:34:14.217Z"
+  },
+  {
+    "title": "AI Legaltech Software",
+    "image": "https://images.pexels.com/photos/3862599/pexels-photo-3862599.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-legaltech-software.html",
+    "date": "2026-07-13T16:34:02.294Z"
+  },
+  {
+    "title": "Fintech Revolution: Changing Finance Forever",
+    "image": "https://images.pexels.com/photos/843700/pexels-photo-843700.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/fintech-revolution-changing-finance-forever.html",
+    "date": "2026-07-13T16:33:49.613Z"
+  },
+  {
+    "title": "Revolutionizing Learning: AI in Education",
+    "image": "https://images.pexels.com/photos/5212666/pexels-photo-5212666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/revolutionizing-learning-ai-in-education.html",
+    "date": "2026-07-13T16:33:36.216Z"
+  },
+  {
+    "title": "AI HR Software: Streamlining Human Resources",
+    "image": "https://images.pexels.com/photos/16094043/pexels-photo-16094043.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-hr-software-streamlining-human-resources.html",
+    "date": "2026-07-13T16:33:24.144Z"
+  },
+  {
+    "title": "AI PDF Chat: The Future of Document Analysis",
+    "image": "https://images.pexels.com/photos/6326381/pexels-photo-6326381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-pdf-chat-the-future-of-document-analysis.html",
+    "date": "2026-07-13T16:33:11.421Z"
+  },
+  {
+    "title": "AI Amazon Seller Tools: Separating Fact from Fiction",
+    "image": "https://images.pexels.com/photos/7857499/pexels-photo-7857499.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-amazon-seller-tools-separating-fact-from-fiction.html",
+    "date": "2026-07-13T16:32:59.072Z"
+  },
+  {
+    "title": "AI Quotation Generators",
+    "image": "https://images.pexels.com/photos/18475687/pexels-photo-18475687.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-quotation-generators.html",
+    "date": "2026-07-13T16:32:46.931Z"
+  },
+  {
+    "title": "Revolutionizing Online Shopping: AI Ecommerce Platforms",
+    "image": "https://images.pexels.com/photos/6214472/pexels-photo-6214472.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/revolutionizing-online-shopping-ai-ecommerce-platforms.html",
+    "date": "2026-07-13T16:32:34.785Z"
+  },
+  {
+    "title": "AI Password Manager 2026 Update",
+    "image": "https://images.pexels.com/photos/38482447/pexels-photo-38482447.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-password-manager-2026-update.html",
+    "date": "2026-07-13T16:32:18.207Z"
+  },
+  {
+    "title": "AI Headline Generator: Step by Step Guide",
+    "image": "https://images.pexels.com/photos/30885924/pexels-photo-30885924.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-headline-generator-step-by-step-guide.html",
+    "date": "2026-07-13T16:32:03.732Z"
+  },
+  {
+    "title": "Revolutionizing Compliance with AI Audit Software",
+    "image": "https://images.pexels.com/photos/32845671/pexels-photo-32845671.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/revolutionizing-compliance-with-ai-audit-software.html",
+    "date": "2026-07-13T16:31:50.690Z"
+  },
+  {
+    "title": "Revolutionizing Business with AI",
+    "image": "https://images.pexels.com/photos/5912588/pexels-photo-5912588.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/revolutionizing-business-with-ai.html",
+    "date": "2026-07-13T16:31:38.303Z"
+  },
+  {
+    "title": "AI Receipt Scanner Myths Debunked",
+    "image": "https://images.pexels.com/photos/3570246/pexels-photo-3570246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-receipt-scanner-myths-debunked.html",
+    "date": "2026-07-13T16:31:24.709Z"
+  },
+  {
+    "title": "Avoiding AI Clinical Documentation Mistakes",
+    "image": "https://images.pexels.com/photos/6097766/pexels-photo-6097766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/avoiding-ai-clinical-documentation-mistakes.html",
+    "date": "2026-07-13T16:31:06.353Z"
+  },
+  {
+    "title": "AI Resume Parser: Revolutionizing Hiring",
+    "image": "https://images.pexels.com/photos/270238/pexels-photo-270238.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-resume-parser-revolutionizing-hiring.html",
+    "date": "2026-07-13T16:30:53.004Z"
+  },
+  {
+    "title": "AI Conversion Rate Optimization 2026",
+    "image": "https://images.pexels.com/photos/33137126/pexels-photo-33137126.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-conversion-rate-optimization-2026.html",
+    "date": "2026-07-13T16:30:37.220Z"
+  },
+  {
+    "title": "AI Compliance Tools: Avoiding Common Mistakes",
+    "image": "https://images.pexels.com/photos/15380267/pexels-photo-15380267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-compliance-tools-avoiding-common-mistakes.html",
+    "date": "2026-07-13T16:30:24.335Z"
+  },
+  {
+    "title": "Boost Business with AI Strategies",
+    "image": "https://images.pexels.com/photos/5912590/pexels-photo-5912590.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/boost-business-with-ai-strategies.html",
+    "date": "2026-07-13T16:30:11.380Z"
+  },
+  {
+    "title": "AI Ecommerce Dashboard Beginner Tips",
+    "image": "https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-ecommerce-dashboard-beginner-tips.html",
+    "date": "2026-07-13T16:29:58.414Z"
+  },
+  {
+    "title": "Building Personal Brand",
+    "image": "https://images.pexels.com/photos/7661492/pexels-photo-7661492.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/building-personal-brand.html",
+    "date": "2026-07-13T16:29:45.794Z"
+  },
+  {
+    "title": "AI Color Palette Generator: Revolutionizing Design",
+    "image": "https://images.pexels.com/photos/6784684/pexels-photo-6784684.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-color-palette-generator-revolutionizing-design.html",
+    "date": "2026-07-13T16:29:31.513Z"
+  },
+  {
+    "title": "Achieving Financial Freedom Online",
+    "image": "https://images.pexels.com/photos/8919535/pexels-photo-8919535.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/achieving-financial-freedom-online.html",
+    "date": "2026-07-13T16:29:18.785Z"
+  },
+  {
+    "title": "Evergreen Content Ideas 2026",
+    "image": "https://images.pexels.com/photos/15635240/pexels-photo-15635240.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/evergreen-content-ideas-2026.html",
+    "date": "2026-07-13T16:29:06.227Z"
+  },
+  {
+    "title": "Debunking AI Open Source Myths",
+    "image": "https://images.pexels.com/photos/12081252/pexels-photo-12081252.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/debunking-ai-open-source-myths.html",
+    "date": "2026-07-13T16:28:53.670Z"
+  },
+  {
+    "title": "AI Certification Platforms",
+    "image": "https://images.pexels.com/photos/8112198/pexels-photo-8112198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-certification-platforms.html",
+    "date": "2026-07-13T16:28:41.304Z"
+  },
+  {
+    "title": "Avoiding AI Productivity Tool Mistakes",
+    "image": "https://images.pexels.com/photos/15380267/pexels-photo-15380267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/avoiding-ai-productivity-tool-mistakes.html",
+    "date": "2026-07-13T16:28:29.217Z"
+  },
+  {
+    "title": "Revolutionizing HR with AI",
+    "image": "https://images.pexels.com/photos/8097209/pexels-photo-8097209.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/revolutionizing-hr-with-ai.html",
+    "date": "2026-07-13T16:28:16.861Z"
+  },
+  {
+    "title": "AI Software for Remote Teams: Myths Debunked",
+    "image": "https://images.pexels.com/photos/8284721/pexels-photo-8284721.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-software-for-remote-teams-myths-debunked.html",
+    "date": "2026-07-13T16:28:03.597Z"
+  },
+  {
+    "title": "AI Digital Commerce Myths Debunked",
+    "image": "https://images.pexels.com/photos/35541612/pexels-photo-35541612.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-digital-commerce-myths-debunked.html",
+    "date": "2026-07-13T16:27:51.265Z"
+  },
+  {
+    "title": "AI Memory Systems Explained",
+    "image": "https://images.pexels.com/photos/19693216/pexels-photo-19693216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-memory-systems-explained.html",
+    "date": "2026-07-13T16:27:39.165Z"
+  },
+  {
+    "title": "Discover Midjourney Review Essentials",
+    "image": "https://images.pexels.com/photos/17729958/pexels-photo-17729958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/discover-midjourney-review-essentials.html",
+    "date": "2026-07-13T16:27:24.975Z"
+  },
+  {
     "title": "Stripe Alternatives: Explore Top Options",
     "image": "https://images.pexels.com/photos/10223868/pexels-photo-10223868.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "page": "posts/stripe-alternatives-explore-top-options.html",
-    "date": "2026-07-13T16:25:00.565Z"
+    "date": "2026-07-13T16:27:11.109Z"
+  },
+  {
+    "title": "AI Freight Optimization Demystified",
+    "image": "https://images.pexels.com/photos/26492743/pexels-photo-26492743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-freight-optimization-demystified.html",
+    "date": "2026-07-13T16:26:55.539Z"
   },
   {
     "title": "Blockchain in Banking Explained",
     "image": "https://images.pexels.com/photos/8369600/pexels-photo-8369600.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "page": "posts/blockchain-in-banking-explained.html",
-    "date": "2026-07-13T16:24:50.567Z"
+    "date": "2026-07-13T16:26:42.919Z"
   },
   {
-    "title": "AI Documentation Generator",
-    "image": "https://images.pexels.com/photos/15635246/pexels-photo-15635246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/ai-documentation-generator.html",
-    "date": "2026-07-13T16:22:06.423Z"
+    "title": "AI Business Model Innovation Explained",
+    "image": "https://images.pexels.com/photos/19825314/pexels-photo-19825314.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-business-model-innovation-explained.html",
+    "date": "2026-07-13T16:26:30.180Z"
   },
   {
-    "title": "AI Management Software Debunked",
-    "image": "https://images.pexels.com/photos/6253568/pexels-photo-6253568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/ai-management-software-debunked.html",
-    "date": "2026-07-13T16:21:54.034Z"
+    "title": "Leonardo AI Review: Insights and Solutions",
+    "image": "https://images.pexels.com/photos/7947669/pexels-photo-7947669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/leonardo-ai-review-insights-and-solutions.html",
+    "date": "2026-07-13T16:26:17.755Z"
   },
   {
-    "title": "AI Side Hustles Uncovered",
-    "image": "https://images.pexels.com/photos/5899215/pexels-photo-5899215.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/ai-side-hustles-uncovered.html",
-    "date": "2026-07-13T16:21:40.948Z"
-  },
-  {
-    "title": "AI Management Software Debunked",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783950054-IqfDgN.jpg",
-    "page": "posts/ai-management-software-debunked.html",
-    "date": "2026-07-13T15:24:46.151Z"
-  },
-  {
-    "title": "AI Side Hustles Uncovered",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783953023-bxWjm2.jpg",
-    "page": "posts/ai-side-hustles-uncovered.html",
-    "date": "2026-07-13T15:24:32.944Z"
-  },
-  {
-    "title": "AI Developer News Update",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783021164-t5HFOE.jpg",
-    "page": "posts/ai-developer-news-update.html",
-    "date": "2026-07-13T11:13:08.691Z"
-  },
-  {
-    "title": "AI Affiliate Content Generator Guide",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783021188-JyT5if.jpg",
-    "page": "posts/ai-affiliate-content-generator-guide.html",
-    "date": "2026-07-13T11:12:55.638Z"
-  },
-  {
-    "title": "Achieving Financial Freedom Online",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783021226-10rVGz.jpg",
-    "page": "posts/achieving-financial-freedom-online.html",
-    "date": "2026-07-13T11:12:40.535Z"
-  },
-  {
-    "title": "Facebook Marketing Trends",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783021275-mLLWgX.jpg",
-    "page": "posts/facebook-marketing-trends.html",
-    "date": "2026-07-13T11:12:30.014Z"
-  },
-  {
-    "title": "Quora Marketing Strategy",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783021290-r4vsDc.jpg",
-    "page": "posts/quora-marketing-strategy.html",
-    "date": "2026-07-13T11:12:18.823Z"
-  },
-  {
-    "title": "Reddit Marketing Strategies",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783021312-wf19UK.png",
-    "page": "posts/reddit-marketing-strategies.html",
-    "date": "2026-07-13T11:12:03.118Z"
-  },
-  {
-    "title": "Pinterest Marketing Strategy",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783021336-dwkfGD.jpg",
-    "page": "posts/pinterest-marketing-strategy.html",
-    "date": "2026-07-13T11:11:46.103Z"
-  },
-  {
-    "title": "TikTok Marketing Guide for Business",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783021359-lre5o8.jpg",
-    "page": "posts/tiktok-marketing-guide-for-business.html",
-    "date": "2026-07-13T11:11:35.699Z"
-  },
-  {
-    "title": "Mastering LinkedIn Marketing",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783021376-k0AVrg.jpg",
-    "page": "posts/mastering-linkedin-marketing.html",
-    "date": "2026-07-13T11:11:12.948Z"
-  },
-  {
-    "title": "Best PayPal Alternatives for Online Payments",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783021393-4o2zDu.jpg",
-    "page": "posts/best-paypal-alternatives-for-online-payments.html",
-    "date": "2026-07-13T11:11:02.011Z"
-  },
-  {
-    "title": "AI Voice Assistants Explained",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783021531-cI9IR6.jpg",
-    "page": "posts/ai-voice-assistants-explained.html",
-    "date": "2026-07-13T11:10:49.161Z"
-  },
-  {
-    "title": "AI Tools for YouTubers",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783021558-yvbHlX.jpg",
-    "page": "posts/ai-tools-for-youtubers.html",
-    "date": "2026-07-13T11:10:32.120Z"
-  },
-  {
-    "title": "ChatGPT vs Claude: AI Comparison",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783033618-UtAIf5.jpg",
-    "page": "posts/chatgpt-vs-claude-ai-comparison.html",
-    "date": "2026-07-13T11:10:21.663Z"
-  },
-  {
-    "title": "ChatGPT vs DeepSeek: AI Comparison",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783058273-YMa3vG.jpg",
-    "page": "posts/chatgpt-vs-deepseek-ai-comparison.html",
-    "date": "2026-07-13T11:10:11.239Z"
-  },
-  {
-    "title": "Blockchain in Banking Explained",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783058289-Chianh.jpg",
-    "page": "posts/blockchain-in-banking-explained.html",
-    "date": "2026-07-13T11:09:55.527Z"
-  },
-  {
-    "title": "AI News for Beginners",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783073541-TZj3KG.jpg",
-    "page": "posts/ai-news-for-beginners.html",
-    "date": "2026-07-13T11:09:44.426Z"
-  },
-  {
-    "title": "ChatGPT vs Meta AI: Comparative Analysis",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783073553-SQIiKk.jpg",
-    "page": "posts/chatgpt-vs-meta-ai-comparative-analysis.html",
-    "date": "2026-07-13T11:09:33.940Z"
-  },
-  {
-    "title": "Understanding Technology Comparisons",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783078423-gJRoe9.jpg",
-    "page": "posts/understanding-technology-comparisons.html",
-    "date": "2026-07-13T11:09:23.356Z"
-  },
-  {
-    "title": "Business Intelligence Solutions",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783078441-l2tPpv.jpg",
-    "page": "posts/business-intelligence-solutions.html",
-    "date": "2026-07-13T11:09:08.578Z"
-  },
-  {
-    "title": "Career Development Strategies",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783078458-DPBU0s.jpg",
-    "page": "posts/career-development-strategies.html",
-    "date": "2026-07-13T11:08:57.765Z"
-  },
-  {
-    "title": "DeepSeek vs Qwen: Uncovering the Truth",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783089408-EUkwUM.jpg",
-    "page": "posts/deepseek-vs-qwen-uncovering-the-truth.html",
-    "date": "2026-07-13T11:08:41.756Z"
-  },
-  {
-    "title": "Poe AI Review: Avoiding Common Mistakes",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783089426-I2BLNe.jpg",
-    "page": "posts/poe-ai-review-avoiding-common-mistakes.html",
-    "date": "2026-07-13T11:08:26.055Z"
-  },
-  {
-    "title": "AI Business Revolution",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783103540-0owmPg.jpg",
-    "page": "posts/ai-business-revolution.html",
-    "date": "2026-07-13T11:08:14.965Z"
-  },
-  {
-    "title": "Boost Productivity with ChatGPT",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783122173-vRUO8G.jpg",
-    "page": "posts/boost-productivity-with-chatgpt.html",
-    "date": "2026-07-13T11:07:55.369Z"
-  },
-  {
-    "title": "Digital Payment Solutions Case Study",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783144091-FbRZaM.jpg",
-    "page": "posts/digital-payment-solutions-case-study.html",
-    "date": "2026-07-13T11:07:44.651Z"
-  },
-  {
-    "title": "AI for Social Media: Revolutionizing Online Engagement",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783144103-8Nhoyr.jpg",
-    "page": "posts/ai-for-social-media-revolutionizing-online-engagement.html",
-    "date": "2026-07-13T11:07:34.275Z"
-  },
-  {
-    "title": "AI Programming Tutors: A Comprehensive Guide",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783158797-vh3Kju.png",
-    "page": "posts/ai-programming-tutors-a-comprehensive-guide.html",
-    "date": "2026-07-13T11:07:19.796Z"
-  },
-  {
-    "title": "AI Scrum Tools Revealed",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783158812-zFIZYx.jpg",
-    "page": "posts/ai-scrum-tools-revealed.html",
-    "date": "2026-07-13T11:07:09.361Z"
-  },
-  {
-    "title": "Mastering Personal Finance Apps",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783176376-BC0WKG.jpg",
-    "page": "posts/mastering-personal-finance-apps.html",
-    "date": "2026-07-13T11:06:51.519Z"
-  },
-  {
-    "title": "AI Customer Support Software",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783176386-2ksVIF.jpg",
-    "page": "posts/ai-customer-support-software.html",
-    "date": "2026-07-13T11:06:41.043Z"
-  },
-  {
-    "title": "Selling Templates Online: A Growing Market",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783189036-krHQu4.jpg",
-    "page": "posts/selling-templates-online-a-growing-market.html",
-    "date": "2026-07-13T11:06:26.196Z"
-  },
-  {
-    "title": "AI Startup Valuation Strategies",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783204005-XQQNgi.jpg",
-    "page": "posts/ai-startup-valuation-strategies.html",
-    "date": "2026-07-13T11:06:15.518Z"
-  },
-  {
-    "title": "Mastering Appointment Scheduling Software",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783232207-vKdk4w.jpg",
-    "page": "posts/mastering-appointment-scheduling-software.html",
-    "date": "2026-07-13T11:06:00.852Z"
-  },
-  {
-    "title": "Revolutionizing Tech: Top AI Innovations",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783232218-R6r514.png",
-    "page": "posts/revolutionizing-tech-top-ai-innovations.html",
-    "date": "2026-07-13T11:05:44.347Z"
-  },
-  {
-    "title": "Best SaaS Tools for Business",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783244027-VGs1FQ.jpg",
-    "page": "posts/best-saas-tools-for-business.html",
-    "date": "2026-07-13T11:05:33.767Z"
-  },
-  {
-    "title": "AI Tutoring Software 2026",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783246093-4v4rf5.jpg",
-    "page": "posts/ai-tutoring-software-2026.html",
-    "date": "2026-07-13T11:05:23.147Z"
-  },
-  {
-    "title": "Avoiding Common Mistakes in AI Essay Writing",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783260055-9Wx9Zy.jpg",
-    "page": "posts/avoiding-common-mistakes-in-ai-essay-writing.html",
-    "date": "2026-07-13T11:05:08.522Z"
-  },
-  {
-    "title": "Financial Forecasting AI: Predictive Insights",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783261719-NIkIAP.jpg",
-    "page": "posts/financial-forecasting-ai-predictive-insights.html",
-    "date": "2026-07-13T11:04:50.769Z"
-  },
-  {
-    "title": "Optimizing AI Digital Customer Journey",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783278704-XIugcO.jpg",
-    "page": "posts/optimizing-ai-digital-customer-journey.html",
-    "date": "2026-07-13T11:04:36.686Z"
-  },
-  {
-    "title": "Boosting AI Workplace Productivity",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783292337-WMdPaX.jpg",
-    "page": "posts/boosting-ai-workplace-productivity.html",
-    "date": "2026-07-13T11:04:22.890Z"
-  },
-  {
-    "title": "AI Memory Systems Explained",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783850449-TI6uaG.jpg",
-    "page": "posts/ai-memory-systems-explained.html",
-    "date": "2026-07-13T11:04:10.240Z"
-  },
-  {
-    "title": "Discover Midjourney Review Essentials",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783865445-9JeMzh.jpg",
-    "page": "posts/discover-midjourney-review-essentials.html",
-    "date": "2026-07-13T11:03:59.864Z"
-  },
-  {
-    "title": "Stripe Alternatives: Explore Top Options",
-    "image": "https://scaleupai.online/wp-content/uploads/2026/07/pindrive-1783865454-2IyQAA.jpg",
-    "page": "posts/stripe-alternatives-explore-top-options.html",
-    "date": "2026-07-13T11:03:45.224Z"
+    "title": "AI UX Design Tools Explained",
+    "image": "https://images.pexels.com/photos/414974/pexels-photo-414974.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-ux-design-tools-explained.html",
+    "date": "2026-07-13T16:26:02.760Z"
   }
 ]
