@@ -1,5 +1,155 @@
 [
   {
+    "title": "Mastering AI Warehouse Automation",
+    "image": "https://images.pexels.com/photos/36522028/pexels-photo-36522028.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/mastering-ai-warehouse-automation.html",
+    "date": "2026-07-15T11:29:22.394Z"
+  },
+  {
+    "title": "AI API Automation Strategies",
+    "image": "https://images.pexels.com/photos/8438958/pexels-photo-8438958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-api-automation-strategies.html",
+    "date": "2026-07-15T11:29:12.995Z"
+  },
+  {
+    "title": "AI Performance Comparison Made Easy",
+    "image": "https://images.pexels.com/photos/32728405/pexels-photo-32728405.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-performance-comparison-made-easy.html",
+    "date": "2026-07-15T11:29:03.561Z"
+  },
+  {
+    "title": "Fintech APIs: Powering Digital Finance",
+    "image": "https://images.pexels.com/photos/4841737/pexels-photo-4841737.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/fintech-apis-powering-digital-finance.html",
+    "date": "2026-07-15T11:28:54.278Z"
+  },
+  {
+    "title": "Mastering Zero-Based Budgeting",
+    "image": "https://images.pexels.com/photos/38473088/pexels-photo-38473088.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/mastering-zero-based-budgeting.html",
+    "date": "2026-07-15T11:28:44.889Z"
+  },
+  {
+    "title": "AI Industry Trends to Watch",
+    "image": "https://images.pexels.com/photos/8250139/pexels-photo-8250139.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-industry-trends-to-watch.html",
+    "date": "2026-07-15T11:28:35.634Z"
+  },
+  {
+    "title": "AI Agile Tools: Advanced Strategies",
+    "image": "https://images.pexels.com/photos/6804077/pexels-photo-6804077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-agile-tools-advanced-strategies.html",
+    "date": "2026-07-15T11:28:26.250Z"
+  },
+  {
+    "title": "Scaling Business Strategies",
+    "image": "https://images.pexels.com/photos/6476797/pexels-photo-6476797.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/scaling-business-strategies.html",
+    "date": "2026-07-15T11:28:16.825Z"
+  },
+  {
+    "title": "AI Investment Portfolio Tips for Beginners",
+    "image": "https://images.pexels.com/photos/12220436/pexels-photo-12220436.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-investment-portfolio-tips-for-beginners.html",
+    "date": "2026-07-15T11:28:07.420Z"
+  },
+  {
+    "title": "Debunking AI Innovation Myths",
+    "image": "https://images.pexels.com/photos/19825314/pexels-photo-19825314.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/debunking-ai-innovation-myths.html",
+    "date": "2026-07-15T11:27:57.871Z"
+  },
+  {
+    "title": "AI Route Optimization Explained",
+    "image": "https://images.pexels.com/photos/12654945/pexels-photo-12654945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-route-optimization-explained.html",
+    "date": "2026-07-15T11:27:48.571Z"
+  },
+  {
+    "title": "AI Legaltech Software",
+    "image": "https://images.pexels.com/photos/3862599/pexels-photo-3862599.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-legaltech-software.html",
+    "date": "2026-07-15T11:27:39.116Z"
+  },
+  {
+    "title": "Fintech Revolution: Changing Finance Forever",
+    "image": "https://images.pexels.com/photos/843700/pexels-photo-843700.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/fintech-revolution-changing-finance-forever.html",
+    "date": "2026-07-15T11:27:29.808Z"
+  },
+  {
+    "title": "Revolutionizing Learning: AI in Education",
+    "image": "https://images.pexels.com/photos/5212666/pexels-photo-5212666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/revolutionizing-learning-ai-in-education.html",
+    "date": "2026-07-15T11:27:20.335Z"
+  },
+  {
+    "title": "AI HR Software: Streamlining Human Resources",
+    "image": "https://images.pexels.com/photos/16094043/pexels-photo-16094043.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-hr-software-streamlining-human-resources.html",
+    "date": "2026-07-15T11:27:10.820Z"
+  },
+  {
+    "title": "AI PDF Chat: The Future of Document Analysis",
+    "image": "https://images.pexels.com/photos/6326381/pexels-photo-6326381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-pdf-chat-the-future-of-document-analysis.html",
+    "date": "2026-07-15T11:27:01.009Z"
+  },
+  {
+    "title": "AI Amazon Seller Tools: Separating Fact from Fiction",
+    "image": "https://images.pexels.com/photos/7857499/pexels-photo-7857499.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-amazon-seller-tools-separating-fact-from-fiction.html",
+    "date": "2026-07-15T11:26:51.662Z"
+  },
+  {
+    "title": "AI Quotation Generators",
+    "image": "https://images.pexels.com/photos/18475687/pexels-photo-18475687.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-quotation-generators.html",
+    "date": "2026-07-15T11:26:42.376Z"
+  },
+  {
+    "title": "Revolutionizing Online Shopping: AI Ecommerce Platforms",
+    "image": "https://images.pexels.com/photos/6214472/pexels-photo-6214472.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/revolutionizing-online-shopping-ai-ecommerce-platforms.html",
+    "date": "2026-07-15T11:26:32.770Z"
+  },
+  {
+    "title": "AI Password Manager 2026 Update",
+    "image": "https://images.pexels.com/photos/38482447/pexels-photo-38482447.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-password-manager-2026-update.html",
+    "date": "2026-07-15T11:26:23.348Z"
+  },
+  {
+    "title": "AI Headline Generator: Step by Step Guide",
+    "image": "https://images.pexels.com/photos/30885924/pexels-photo-30885924.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-headline-generator-step-by-step-guide.html",
+    "date": "2026-07-15T11:26:13.889Z"
+  },
+  {
+    "title": "Adyen Alternatives: Common Mistakes to Avoid",
+    "image": "https://images.pexels.com/photos/6289064/pexels-photo-6289064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/adyen-alternatives-common-mistakes-to-avoid.html",
+    "date": "2026-07-15T11:26:04.440Z"
+  },
+  {
+    "title": "AI Reporting Automation 2026 Update",
+    "image": "https://images.pexels.com/photos/5561916/pexels-photo-5561916.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-reporting-automation-2026-update.html",
+    "date": "2026-07-15T11:25:54.497Z"
+  },
+  {
+    "title": "AI Future Trends To Watch",
+    "image": "https://images.pexels.com/photos/36697930/pexels-photo-36697930.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ai-future-trends-to-watch.html",
+    "date": "2026-07-15T11:25:44.605Z"
+  },
+  {
+    "title": "UFO Themed Decor Inspiration",
+    "image": "https://images.pexels.com/photos/8312013/pexels-photo-8312013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "page": "posts/ufo-themed-decor-inspiration.html",
+    "date": "2026-07-15T11:25:34.852Z"
+  },
+  {
     "title": "Revolutionizing Compliance with AI Audit Software",
     "image": "https://images.pexels.com/photos/32845671/pexels-photo-32845671.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "page": "posts/revolutionizing-compliance-with-ai-audit-software.html",
@@ -148,155 +298,5 @@
     "image": "https://images.pexels.com/photos/19825314/pexels-photo-19825314.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "page": "posts/ai-business-model-innovation-explained.html",
     "date": "2026-07-15T09:48:07.059Z"
-  },
-  {
-    "title": "Leonardo AI Review: Insights and Solutions",
-    "image": "https://images.pexels.com/photos/7947669/pexels-photo-7947669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/leonardo-ai-review-insights-and-solutions.html",
-    "date": "2026-07-15T07:31:39.980Z"
-  },
-  {
-    "title": "AI UX Design Tools Explained",
-    "image": "https://images.pexels.com/photos/414974/pexels-photo-414974.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/ai-ux-design-tools-explained.html",
-    "date": "2026-07-15T07:31:30.580Z"
-  },
-  {
-    "title": "AI Documentation Generator",
-    "image": "https://images.pexels.com/photos/15635246/pexels-photo-15635246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/ai-documentation-generator.html",
-    "date": "2026-07-15T07:31:21.386Z"
-  },
-  {
-    "title": "AI Management Software Debunked",
-    "image": "https://images.pexels.com/photos/6253568/pexels-photo-6253568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/ai-management-software-debunked.html",
-    "date": "2026-07-15T07:31:11.801Z"
-  },
-  {
-    "title": "AI Side Hustles Uncovered",
-    "image": "https://images.pexels.com/photos/5899215/pexels-photo-5899215.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/ai-side-hustles-uncovered.html",
-    "date": "2026-07-15T07:31:02.361Z"
-  },
-  {
-    "title": "AI Startup Checklist: Myths Debunked",
-    "image": "https://images.pexels.com/photos/7414050/pexels-photo-7414050.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/ai-startup-checklist-myths-debunked.html",
-    "date": "2026-07-15T07:30:52.770Z"
-  },
-  {
-    "title": "Revolutionizing AI Exam Prep",
-    "image": "https://images.pexels.com/photos/6684255/pexels-photo-6684255.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/revolutionizing-ai-exam-prep.html",
-    "date": "2026-07-15T07:30:43.425Z"
-  },
-  {
-    "title": "AI Bug Tracking Mistakes",
-    "image": "https://images.pexels.com/photos/6193925/pexels-photo-6193925.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/ai-bug-tracking-mistakes.html",
-    "date": "2026-07-15T07:30:34.071Z"
-  },
-  {
-    "title": "AI Fintech News: Quick Wins",
-    "image": "https://images.pexels.com/photos/37594379/pexels-photo-37594379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/ai-fintech-news-quick-wins.html",
-    "date": "2026-07-15T07:30:24.731Z"
-  },
-  {
-    "title": "AI in Manufacturing Execution Systems",
-    "image": "https://images.pexels.com/photos/38427501/pexels-photo-38427501.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/ai-in-manufacturing-execution-systems.html",
-    "date": "2026-07-15T07:30:15.114Z"
-  },
-  {
-    "title": "AI Wiki Software Errors",
-    "image": "https://images.pexels.com/photos/270557/pexels-photo-270557.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/ai-wiki-software-errors.html",
-    "date": "2026-07-15T07:30:05.833Z"
-  },
-  {
-    "title": "Self Expression Photography Guide",
-    "image": "https://images.pexels.com/photos/22863213/pexels-photo-22863213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/self-expression-photography-guide.html",
-    "date": "2026-07-15T07:29:56.360Z"
-  },
-  {
-    "title": "Nail Art Revolution: Self Expression Evolves",
-    "image": "https://images.pexels.com/photos/7321742/pexels-photo-7321742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/nail-art-revolution-self-expression-evolves.html",
-    "date": "2026-07-15T07:29:47.057Z"
-  },
-  {
-    "title": "Afrobohemian Home Decor Inspiration",
-    "image": "https://images.pexels.com/photos/34812112/pexels-photo-34812112.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/afrobohemian-home-decor-inspiration.html",
-    "date": "2026-07-15T07:29:37.744Z"
-  },
-  {
-    "title": "Afro Chic Home Decor Trends",
-    "image": "https://images.pexels.com/photos/17464320/pexels-photo-17464320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/afro-chic-home-decor-trends.html",
-    "date": "2026-07-15T07:29:28.428Z"
-  },
-  {
-    "title": "African Boho Living Room Style",
-    "image": "https://images.pexels.com/photos/15124841/pexels-photo-15124841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/african-boho-living-room-style.html",
-    "date": "2026-07-15T07:29:18.842Z"
-  },
-  {
-    "title": "Self Expression Photography Guide",
-    "image": "https://images.pexels.com/photos/22863213/pexels-photo-22863213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/self-expression-photography-guide.html",
-    "date": "2026-07-15T07:29:09.490Z"
-  },
-  {
-    "title": "Discover Your Personal Aesthetic Quiz",
-    "image": "https://images.pexels.com/photos/8944957/pexels-photo-8944957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/discover-your-personal-aesthetic-quiz.html",
-    "date": "2026-07-15T07:29:00.254Z"
-  },
-  {
-    "title": "Personality Decor Accents",
-    "image": "https://images.pexels.com/photos/1099816/pexels-photo-1099816.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/personality-decor-accents.html",
-    "date": "2026-07-15T07:28:50.744Z"
-  },
-  {
-    "title": "Niche Subculture Aesthetic Guide",
-    "image": "https://images.pexels.com/photos/38475954/pexels-photo-38475954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/niche-subculture-aesthetic-guide.html",
-    "date": "2026-07-15T07:28:41.358Z"
-  },
-  {
-    "title": "Curated Wardrobe Capsule Essentials",
-    "image": "https://images.pexels.com/photos/8580765/pexels-photo-8580765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/curated-wardrobe-capsule-essentials.html",
-    "date": "2026-07-15T07:28:32.098Z"
-  },
-  {
-    "title": "Expressing Yourself Through Nail Art",
-    "image": "https://images.pexels.com/photos/22944591/pexels-photo-22944591.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/expressing-yourself-through-nail-art.html",
-    "date": "2026-07-15T07:28:22.767Z"
-  },
-  {
-    "title": "Self Expression Nail Art Trends",
-    "image": "https://images.pexels.com/photos/5871741/pexels-photo-5871741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/self-expression-nail-art-trends.html",
-    "date": "2026-07-15T07:28:13.370Z"
-  },
-  {
-    "title": "Aesthetic Mood Board Ideas to Inspire Creativity",
-    "image": "https://images.pexels.com/photos/4466999/pexels-photo-4466999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/aesthetic-mood-board-ideas-to-inspire-creativity.html",
-    "date": "2026-07-15T07:28:03.995Z"
-  },
-  {
-    "title": "Aesthetic Mood Board Ideas for Creative Projects",
-    "image": "https://images.pexels.com/photos/4466999/pexels-photo-4466999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/aesthetic-mood-board-ideas-for-creative-projects.html",
-    "date": "2026-07-15T07:27:54.531Z"
   }
 ]
