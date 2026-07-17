@@ -292,7 +292,7 @@ html,body{background:var(--bg);color:var(--text);font-family:-apple-system,Blink
 const tg = window.Telegram?.WebApp;
 if (tg) { tg.ready(); tg.expand(); }
 
-const WP_API  = 'https://scaleupai.online/wp-json/wp/v2/posts?_embed&per_page=12&orderby=date&order=desc&status=publish';
+const WP_API  = 'https://scaleupai.online/wp-json/wp/v2/posts?_embed&per_page=6&orderby=date&order=desc&status=publish';
 const BOT_URL = 'https://t.me/ScaleupAI_bot';
 const TUBE_THRESHOLD = 1000;
 const OWNER_TG = 'osobakehinde'; // DM target for TubeStack claim
@@ -717,13 +717,29 @@ setTimeout(() => {
   }
 }, 3000);
 
-fetch(WP_API)
-  .then(r => r.json())
-  .then(posts => { allPosts = posts; renderFeed(posts); })
-  .catch(() => {
-    document.getElementById('feed').innerHTML =
-      '<div class="empty"><div class="empty-icon">⚠️</div><p>Could not load articles.<br>Check your connection and try again.</p></div>';
-  });
+function loadArticles() {
+  const feed = document.getElementById('feed');
+  feed.innerHTML = '<div class="spinner"><div class="spinner-ring"></div></div>';
+  const ctrl = new AbortController();
+  const tid  = setTimeout(() => ctrl.abort(), 10000);
+  fetch(WP_API, { signal: ctrl.signal })
+    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(posts => {
+      clearTimeout(tid);
+      if (!Array.isArray(posts) || !posts.length) {
+        feed.innerHTML = '<div class="empty"><div class="empty-icon">📭</div><p>No articles yet.</p></div>';
+        return;
+      }
+      allPosts = posts;
+      renderFeed(posts);
+    })
+    .catch(err => {
+      clearTimeout(tid);
+      const msg = err.name === 'AbortError' ? 'Took too long. Tap to retry.' : 'Could not load. Tap to retry.';
+      feed.innerHTML = `<div class="empty"><div class="empty-icon">⚠️</div><p>${msg}</p><button onclick="loadArticles()" style="margin-top:12px;padding:10px 24px;background:var(--accent);color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer">Retry</button></div>`;
+    });
+}
+loadArticles();
 </script>
 </body>
 </html>
