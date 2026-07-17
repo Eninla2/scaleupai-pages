@@ -5,10 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>ScaleUp AI</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
-<!-- Monetag Vignette Banner — TMA format, fires once per session -->
-<script>(function(s){s.dataset.zone='11337001',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-<!-- Monetag In-Page Push — fires as sticky notification bar -->
-<script async src="//thubanoa.com/1?z=11336997"></script>
+<!-- Monetag TMA SDK — zone 11338212 (Rewarded Interstitial + In-App Interstitial) -->
+<script src='//libtl.com/sdk.js' data-zone='11338212' data-sdk='show_11338212'></script>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 :root {
@@ -173,6 +171,13 @@ html,body{background:var(--bg);color:var(--text);font-family:-apple-system,Blink
 .av-cta{display:block;background:var(--accent);color:#fff;text-align:center;text-decoration:none;padding:14px;border-radius:12px;font-size:16px;font-weight:700;margin-bottom:12px}
 .av-earn{display:block;background:rgba(245,166,35,.15);color:var(--gold);text-align:center;border:1px solid rgba(245,166,35,.3);padding:12px;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;margin-bottom:12px}
 .av-share{display:block;background:var(--card);color:var(--text);text-align:center;border:1px solid var(--border);padding:12px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer}
+
+/* ── Reward banner ── */
+.reward-banner{background:linear-gradient(135deg,rgba(123,47,255,.2),rgba(255,45,85,.2));border:1px solid rgba(123,47,255,.4);border-radius:16px;padding:16px;text-align:center;animation:fadeIn .3s ease}
+.rb-icon{font-size:28px;margin-bottom:8px}
+.rb-title{font-size:15px;font-weight:700;margin-bottom:4px}
+.rb-sub{font-size:12px;color:var(--muted);margin-bottom:12px}
+.rb-btn{background:linear-gradient(90deg,var(--accent2),var(--accent));color:#fff;border:none;border-radius:20px;padding:10px 24px;font-size:14px;font-weight:700;cursor:pointer}
 
 /* ── Spinner ── */
 .spinner{display:flex;justify-content:center;padding:48px}
@@ -588,6 +593,32 @@ const PROMOS=[
   { badge:'🏆 Earn Free', title:'1,000 Coins = Free TubeStack Access', sub:'Read articles daily and earn free YouTube AI tools.', url:null, action:'rewards' },
 ];
 
+// ── Monetag rewarded ad ───────────────────────────────────────────────────────
+
+function showRewardedAd(banner) {
+  if (typeof show_11338212 !== 'undefined') {
+    show_11338212().then(() => {
+      if (banner) banner.remove();
+      addCoins(15, 'Watched an ad');
+    }).catch(() => {
+      if (banner) banner.remove();
+    });
+  } else {
+    if (banner) banner.remove();
+  }
+}
+
+function makeRewardBanner() {
+  const div = document.createElement('div');
+  div.className = 'reward-banner';
+  div.innerHTML = `
+    <div class="rb-icon">🎁</div>
+    <div class="rb-title">Watch an Ad — Earn +15 🪙</div>
+    <div class="rb-sub">Coins count toward your free TubeStack access</div>
+    <button class="rb-btn" onclick="showRewardedAd(this.closest('.reward-banner'))">Watch &amp; Earn</button>`;
+  return div;
+}
+
 function makePromoCard() {
   const p = PROMOS[promoIdx % PROMOS.length]; promoIdx++;
   const div = document.createElement('div');
@@ -613,6 +644,7 @@ function renderFeed(posts) {
     const img     = post._embedded?.['wp:featuredmedia']?.[0]?.source_url||'';
     const cat     = inferCategory(title);
     const date    = timeAgo(post.date);
+    if (i>0 && i%3===0) feed.appendChild(makeRewardBanner());
     if (i>0 && i%PROMO_EVERY===0) feed.appendChild(makePromoCard());
     const card=document.createElement('div');
     card.className='card'+(i===0?' featured':'');
@@ -677,6 +709,13 @@ document.getElementById('cats').addEventListener('click', e => {
 
 renderCheckinStrip();
 updateCoinsUI();
+
+// Start In-App Interstitial — 2 ads per 6 min, 30s apart, 5s delay before first
+setTimeout(() => {
+  if (typeof show_11338212 !== 'undefined') {
+    show_11338212({ type:'inApp', inAppSettings:{ frequency:2, capping:0.1, interval:30, timeout:5, everyPage:false } });
+  }
+}, 3000);
 
 fetch(WP_API)
   .then(r=>r.json())
