@@ -6,7 +6,7 @@
 <title>ScaleUp AI</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <!-- Monetag TMA SDK — zone 11338212 (Rewarded Interstitial + In-App Interstitial) -->
-<script src='//libtl.com/sdk.js' data-zone='11338212' data-sdk='show_11338212'></script>
+<script async src='//libtl.com/sdk.js' data-zone='11338212' data-sdk='show_11338212'></script>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 :root {
@@ -292,7 +292,7 @@ html,body{background:var(--bg);color:var(--text);font-family:-apple-system,Blink
 const tg = window.Telegram?.WebApp;
 if (tg) { tg.ready(); tg.expand(); }
 
-const WP_API  = 'https://scaleupai.online/wp-json/wp/v2/posts?_embed&per_page=30&orderby=date&order=desc&status=publish';
+const WP_API  = 'https://scaleupai.online/wp-json/wp/v2/posts?_embed&per_page=12&orderby=date&order=desc&status=publish';
 const BOT_URL = 'https://t.me/ScaleupAI_bot';
 const TUBE_THRESHOLD = 1000;
 const OWNER_TG = 'osobakehinde'; // DM target for TubeStack claim
@@ -584,7 +584,7 @@ function timeAgo(d) {
 
 // ── Article feed ─────────────────────────────────────────────────────────────
 
-let allPosts=[], promoIdx=0;
+let allPosts=[], promoIdx=0, wpPage=1, wpLoading=false, wpDone=false;
 const PROMO_EVERY=5;
 const PROMOS=[
   { badge:'💰 Earn Online', title:'Make $100–$1k+ with CPA Marketing', sub:'200+ students already doing it.', url:'https://www.osobakehinde.online' },
@@ -717,13 +717,74 @@ setTimeout(() => {
   }
 }, 3000);
 
-fetch(WP_API)
-  .then(r=>r.json())
-  .then(posts=>{allPosts=posts;renderFeed(posts);})
-  .catch(()=>{
-    document.getElementById('feed').innerHTML=
-      '<div class="empty"><div class="empty-icon">⚠️</div><p>Could not load articles.<br>Check your connection.</p></div>';
+function loadPosts(append) {
+  if (wpLoading || wpDone) return;
+  wpLoading = true;
+  const url = WP_API + '&page=' + wpPage;
+  fetch(url)
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(posts => {
+      wpLoading = false;
+      if (!posts.length) { wpDone = true; removeLoadMore(); return; }
+      wpPage++;
+      if (append) {
+        allPosts = allPosts.concat(posts);
+        appendFeed(posts);
+      } else {
+        allPosts = posts;
+        renderFeed(posts);
+      }
+      if (posts.length < 12) { wpDone = true; removeLoadMore(); }
+      else ensureLoadMore();
+    })
+    .catch(() => {
+      wpLoading = false;
+      if (!append)
+        document.getElementById('feed').innerHTML =
+          '<div class="empty"><div class="empty-icon">⚠️</div><p>Could not load articles.<br>Check your connection.</p></div>';
+    });
+}
+
+function ensureLoadMore() {
+  if (document.getElementById('loadMoreBtn')) return;
+  const btn = document.createElement('button');
+  btn.id = 'loadMoreBtn';
+  btn.textContent = 'Load more articles';
+  btn.style.cssText = 'display:block;width:calc(100% - 32px);margin:0 16px 16px;padding:13px;background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:12px;font-size:14px;font-weight:600;cursor:pointer';
+  btn.onclick = () => loadPosts(true);
+  document.getElementById('feed').appendChild(btn);
+}
+function removeLoadMore() { document.getElementById('loadMoreBtn')?.remove(); }
+
+function appendFeed(posts) {
+  const feed = document.getElementById('feed');
+  removeLoadMore();
+  posts.forEach((post, i) => {
+    const idx = allPosts.indexOf(post);
+    const title   = stripHtml(post.title.rendered);
+    const excerpt = stripHtml(post.excerpt.rendered).substring(0,120);
+    const img     = post._embedded?.['wp:featuredmedia']?.[0]?.source_url||'';
+    const cat     = inferCategory(title);
+    const date    = timeAgo(post.date);
+    if (idx > 0 && idx % 3 === 0) feed.appendChild(makeRewardBanner());
+    if (idx > 0 && idx % PROMO_EVERY === 0) feed.appendChild(makePromoCard());
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      ${img?`<img class="card-img" src="${img}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}
+      <div class="card-body">
+        <span class="card-tag">${cat}</span>
+        <div class="card-title">${title}</div>
+        <div class="card-excerpt">${excerpt}</div>
+        <div class="card-meta"><span class="card-date">${date}</span><button class="read-btn">Read →</button></div>
+      </div>`;
+    card.addEventListener('click', () => openArticle(post));
+    feed.appendChild(card);
   });
+  if (!wpDone) ensureLoadMore();
+}
+
+loadPosts(false);
 </script>
 </body>
 </html>
