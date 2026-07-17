@@ -15,20 +15,22 @@
 }
 html,body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
 
-/* ── Nav tabs ── */
+/* ── Nav ── */
 .nav{position:fixed;bottom:0;left:0;right:0;z-index:100;background:rgba(15,15,19,.97);backdrop-filter:blur(16px);border-top:1px solid var(--border);display:flex}
 .nav-btn{flex:1;padding:10px 0 14px;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;color:var(--muted);font-size:10px;font-weight:600;letter-spacing:.04em;transition:color .2s}
 .nav-btn .ni{font-size:20px}
 .nav-btn.active{color:var(--accent)}
-.nav-btn.earn-btn.active{color:var(--gold)}
+.nav-btn.earn-btn.active,.nav-btn.rewards-btn.active{color:var(--gold)}
 
 /* ── Header ── */
-.header{position:sticky;top:0;z-index:50;background:rgba(15,15,19,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:14px 16px 10px;display:flex;align-items:center;justify-content:space-between}
+.header{position:sticky;top:0;z-index:50;background:rgba(15,15,19,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 16px 10px;display:flex;align-items:center;justify-content:space-between}
 .header-logo{display:flex;align-items:center;gap:10px}
 .logo-icon{width:32px;height:32px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px}
 .logo-text{font-size:17px;font-weight:700;letter-spacing:-.02em}
 .logo-sub{font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
-.share-btn{background:var(--tag-bg);color:var(--accent);border:1px solid rgba(255,45,85,.3);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:600;cursor:pointer}
+.coins-badge{display:flex;align-items:center;gap:5px;background:rgba(245,166,35,.15);border:1px solid rgba(245,166,35,.3);border-radius:20px;padding:5px 12px;cursor:pointer}
+.coins-icon{font-size:14px}
+.coins-val{font-size:13px;font-weight:800;color:var(--gold)}
 
 /* ── Pages ── */
 .page{display:none;padding-bottom:80px}
@@ -39,6 +41,15 @@ html,body{background:var(--bg);color:var(--text);font-family:-apple-system,Blink
 .cats::-webkit-scrollbar{display:none}
 .cat{flex-shrink:0;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;background:var(--card);color:var(--muted);border:1px solid var(--border);transition:all .2s}
 .cat.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* ── Daily check-in strip ── */
+.checkin-strip{margin:12px 16px 0;background:linear-gradient(135deg,rgba(245,166,35,.12),rgba(123,47,255,.12));border:1px solid rgba(245,166,35,.3);border-radius:14px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.ci-left{flex:1}
+.ci-title{font-size:14px;font-weight:800;color:var(--gold);margin-bottom:2px}
+.ci-sub{font-size:11px;color:var(--muted)}
+.ci-streak{font-size:11px;color:var(--gold);margin-top:3px;font-weight:700}
+.ci-btn{background:var(--gold);color:#000;border:none;border-radius:10px;padding:8px 18px;font-size:13px;font-weight:800;cursor:pointer;flex-shrink:0}
+.ci-btn:disabled{background:rgba(245,166,35,.3);color:rgba(245,166,35,.6);cursor:default}
 
 /* ── Article feed ── */
 .feed{padding:12px 16px;display:flex;flex-direction:column;gap:12px}
@@ -55,31 +66,26 @@ html,body{background:var(--bg);color:var(--text);font-family:-apple-system,Blink
 .card-date{font-size:11px;color:var(--muted)}
 .read-btn{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;font-weight:700;cursor:pointer}
 
+/* ── Coin toast ── */
+.coin-toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:rgba(245,166,35,.95);color:#000;font-size:13px;font-weight:800;padding:8px 18px;border-radius:20px;opacity:0;transition:all .3s;pointer-events:none;z-index:999;white-space:nowrap}
+.coin-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
 /* ── Promo card in feed ── */
-.promo-card{background:linear-gradient(135deg,rgba(245,166,35,.12),rgba(123,47,255,.12));border:1px solid rgba(245,166,35,.35);border-radius:16px;padding:16px;cursor:pointer;animation:fadeIn .3s ease}
+.promo-card{background:linear-gradient(135deg,rgba(245,166,35,.12),rgba(123,47,255,.12));border:1px solid rgba(245,166,35,.35);border-radius:16px;padding:16px;animation:fadeIn .3s ease}
 .promo-card .pc-badge{display:inline-block;background:var(--gold);color:#000;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-bottom:10px}
 .promo-card .pc-title{font-size:15px;font-weight:800;margin-bottom:6px;line-height:1.3}
 .promo-card .pc-sub{font-size:12px;color:rgba(240,240,240,.7);margin-bottom:12px;line-height:1.5}
 .promo-card .pc-btn{display:inline-block;background:var(--gold);color:#000;font-size:13px;font-weight:800;padding:9px 20px;border-radius:20px;border:none;cursor:pointer}
-
-/* ── Monetag reward banner ── */
-.reward-banner{background:linear-gradient(135deg,rgba(123,47,255,.2),rgba(255,45,85,.2));border:1px solid rgba(123,47,255,.4);border-radius:16px;padding:16px;text-align:center;cursor:pointer;animation:fadeIn .3s ease}
-.rb-icon{font-size:28px;margin-bottom:8px}
-.rb-title{font-size:15px;font-weight:700;margin-bottom:4px}
-.rb-sub{font-size:12px;color:var(--muted);margin-bottom:12px}
-.rb-btn{background:linear-gradient(90deg,var(--accent2),var(--accent));color:#fff;border:none;border-radius:20px;padding:10px 24px;font-size:14px;font-weight:700;cursor:pointer}
 
 /* ── Earn page ── */
 .earn-header{padding:20px 16px 4px}
 .earn-header h2{font-size:20px;font-weight:800;letter-spacing:-.02em}
 .earn-header p{font-size:13px;color:var(--muted);margin-top:4px}
 .earn-feed{padding:12px 16px;display:flex;flex-direction:column;gap:14px}
-
 .offer-card{border-radius:18px;overflow:hidden;animation:fadeIn .3s ease}
 .offer-card.course{background:linear-gradient(145deg,#1a1030,#16102a);border:1px solid rgba(123,47,255,.4)}
 .offer-card.affiliate{background:linear-gradient(145deg,#0f1a0f,#121e12);border:1px solid rgba(0,200,83,.35)}
 .offer-card.tool{background:linear-gradient(145deg,#0f1520,#121822);border:1px solid rgba(41,182,246,.35)}
-
 .oc-top{padding:18px 18px 0}
 .oc-badge{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:4px;margin-bottom:10px}
 .course .oc-badge{background:rgba(123,47,255,.25);color:#a97cff}
@@ -100,7 +106,55 @@ html,body{background:var(--bg);color:var(--text);font-family:-apple-system,Blink
 .course .oc-cta{background:linear-gradient(90deg,#7B2FFF,#a855f7);color:#fff}
 .affiliate .oc-cta{background:linear-gradient(90deg,#00C853,#00e676);color:#000}
 .tool .oc-cta{background:linear-gradient(90deg,#0288d1,#29B6F6);color:#fff}
-.oc-secondary{display:block;text-align:center;font-size:13px;color:var(--muted);padding:10px;cursor:pointer;text-decoration:none}
+
+/* ── Rewards page ── */
+.rewards-page{padding:0 0 80px}
+.rw-hero{padding:20px 16px 16px;background:linear-gradient(160deg,rgba(123,47,255,.15),rgba(245,166,35,.08))}
+.rw-coins-display{font-size:44px;font-weight:900;color:var(--gold);letter-spacing:-.03em;line-height:1}
+.rw-coins-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:4px;margin-bottom:14px}
+.rw-progress-wrap{background:var(--border);border-radius:8px;height:10px;overflow:hidden;margin-bottom:6px}
+.rw-progress-bar{height:100%;background:linear-gradient(90deg,var(--accent2),var(--gold));border-radius:8px;transition:width .5s ease}
+.rw-progress-label{font-size:11px;color:var(--muted);display:flex;justify-content:space-between}
+.rw-section{padding:16px 16px 0}
+.rw-section-title{font-size:13px;font-weight:800;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.rw-tasks{display:flex;flex-direction:column;gap:10px}
+.rw-task{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:14px}
+.rw-task.done{opacity:.5}
+.rw-task-icon{font-size:22px;flex-shrink:0}
+.rw-task-info{flex:1}
+.rw-task-title{font-size:14px;font-weight:700;margin-bottom:2px}
+.rw-task-desc{font-size:12px;color:var(--muted)}
+.rw-task-coins{font-size:13px;font-weight:800;color:var(--gold);flex-shrink:0}
+
+/* ── Tubestack reward card ── */
+.tube-card{background:linear-gradient(145deg,#0a1628,#0d1f3c);border:2px solid rgba(41,182,246,.5);border-radius:18px;overflow:hidden;margin:12px 16px;animation:fadeIn .3s ease}
+.tube-locked{padding:20px;text-align:center}
+.tube-lock-icon{font-size:40px;margin-bottom:12px}
+.tube-lock-title{font-size:17px;font-weight:800;margin-bottom:6px;background:linear-gradient(90deg,#29B6F6,#7B2FFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.tube-lock-sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.tube-progress-wrap{background:rgba(255,255,255,.07);border-radius:6px;height:8px;overflow:hidden;margin-bottom:8px}
+.tube-progress-bar{height:100%;background:linear-gradient(90deg,#0288d1,#29B6F6);border-radius:6px;transition:width .5s ease}
+.tube-progress-label{font-size:11px;color:var(--muted);text-align:right;margin-bottom:14px}
+.tube-perks{text-align:left;margin-bottom:16px}
+.tube-perk{font-size:12px;color:rgba(240,240,240,.75);display:flex;align-items:center;gap:6px;margin-bottom:5px}
+.tube-unlocked{padding:20px;text-align:center}
+.tube-unlocked-icon{font-size:40px;margin-bottom:10px}
+.tube-unlocked-title{font-size:17px;font-weight:800;color:#29B6F6;margin-bottom:8px}
+.tube-code-box{background:rgba(41,182,246,.1);border:1px solid rgba(41,182,246,.3);border-radius:10px;padding:12px;margin-bottom:12px}
+.tube-code{font-size:20px;font-weight:900;color:#29B6F6;letter-spacing:.12em;font-family:monospace}
+.tube-code-label{font-size:11px;color:var(--muted);margin-top:4px}
+.tube-claim-btn{display:block;width:100%;background:linear-gradient(90deg,#0288d1,#29B6F6);color:#fff;border:none;border-radius:12px;padding:13px;font-size:15px;font-weight:800;cursor:pointer;text-align:center}
+.tube-claimed-note{font-size:12px;color:var(--muted);margin-top:10px;line-height:1.5}
+
+/* ── Leaderboard ── */
+.lb-row{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.lb-rank{font-size:18px;font-weight:900;width:28px;flex-shrink:0;text-align:center}
+.lb-rank.gold{color:#FFD700}
+.lb-rank.silver{color:#C0C0C0}
+.lb-rank.bronze{color:#CD7F32}
+.lb-name{flex:1;font-size:14px;font-weight:700}
+.lb-coins{font-size:13px;font-weight:800;color:var(--gold)}
+.lb-you{border-color:rgba(245,166,35,.5);background:rgba(245,166,35,.06)}
 
 /* ── Article view overlay ── */
 .article-view{display:none;position:fixed;inset:0;background:var(--bg);z-index:200;overflow-y:auto}
@@ -117,7 +171,7 @@ html,body{background:var(--bg);color:var(--text);font-family:-apple-system,Blink
 .av-earn{display:block;background:rgba(245,166,35,.15);color:var(--gold);text-align:center;border:1px solid rgba(245,166,35,.3);padding:12px;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;margin-bottom:12px}
 .av-share{display:block;background:var(--card);color:var(--text);text-align:center;border:1px solid var(--border);padding:12px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer}
 
-/* ── Spinner / empty ── */
+/* ── Spinner ── */
 .spinner{display:flex;justify-content:center;padding:48px}
 .spinner-ring{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -126,6 +180,8 @@ html,body{background:var(--bg);color:var(--text);font-family:-apple-system,Blink
 </style>
 </head>
 <body>
+
+<div class="coin-toast" id="coinToast"></div>
 
 <!-- Article view overlay -->
 <div class="article-view" id="articleView">
@@ -146,7 +202,6 @@ html,body{background:var(--bg);color:var(--text);font-family:-apple-system,Blink
 
 <!-- Main app -->
 <div id="mainApp">
-
   <div class="header">
     <div class="header-logo">
       <div class="logo-icon">⚡</div>
@@ -155,11 +210,15 @@ html,body{background:var(--bg);color:var(--text);font-family:-apple-system,Blink
         <div class="logo-sub">AI Tools &amp; Strategies</div>
       </div>
     </div>
-    <button class="share-btn" onclick="shareBot()">Share ↗</button>
+    <div class="coins-badge" onclick="switchPage('rewards')">
+      <span class="coins-icon">🪙</span>
+      <span class="coins-val" id="headerCoins">0</span>
+    </div>
   </div>
 
   <!-- Articles page -->
   <div class="page active" id="pageArticles">
+    <div id="checkinStrip"></div>
     <div class="cats" id="cats">
       <div class="cat active" data-cat="all">All</div>
       <div class="cat" data-cat="AI Tools">AI Tools</div>
@@ -182,7 +241,29 @@ html,body{background:var(--bg);color:var(--text);font-family:-apple-system,Blink
     <div class="earn-feed" id="earnFeed"></div>
   </div>
 
-  <!-- Bottom nav -->
+  <!-- Rewards page -->
+  <div class="page rewards-page" id="pageRewards">
+    <div class="rw-hero">
+      <div class="rw-coins-display" id="rwCoinsDisplay">0</div>
+      <div class="rw-coins-label">🪙 Total Coins Earned</div>
+      <div class="rw-progress-wrap">
+        <div class="rw-progress-bar" id="rwProgressBar" style="width:0%"></div>
+      </div>
+      <div class="rw-progress-label">
+        <span>0</span><span id="rwProgressNext">1,000 coins = TubeStack</span>
+      </div>
+    </div>
+    <div id="tubeCardSlot"></div>
+    <div class="rw-section">
+      <div class="rw-section-title">How to earn coins</div>
+      <div class="rw-tasks" id="rwTasks"></div>
+    </div>
+    <div class="rw-section" style="margin-top:16px">
+      <div class="rw-section-title">🏆 Top Readers This Week</div>
+      <div class="rw-tasks" id="rwLeaderboard"></div>
+    </div>
+  </div>
+
   <nav class="nav">
     <div class="nav-btn active" id="navArticles" onclick="switchPage('articles')">
       <span class="ni">📰</span>Articles
@@ -190,11 +271,13 @@ html,body{background:var(--bg);color:var(--text);font-family:-apple-system,Blink
     <div class="nav-btn earn-btn" id="navEarn" onclick="switchPage('earn')">
       <span class="ni">💰</span>Earn
     </div>
+    <div class="nav-btn rewards-btn" id="navRewards" onclick="switchPage('rewards')">
+      <span class="ni">🏆</span>Rewards
+    </div>
     <div class="nav-btn" onclick="shareBot()">
       <span class="ni">📤</span>Share
     </div>
   </nav>
-
 </div>
 
 <script>
@@ -203,119 +286,251 @@ if (tg) { tg.ready(); tg.expand(); }
 
 const WP_API  = 'https://scaleupai.online/wp-json/wp/v2/posts?_embed&per_page=30&orderby=date&order=desc&status=publish';
 const BOT_URL = 'https://t.me/ScaleupAI_bot';
-const MONETAG_ZONE = '11337001';
+const TUBE_THRESHOLD = 1000;
+const OWNER_TG = 'osobakehinde'; // DM target for TubeStack claim
 
-let allPosts = [];
-let articlesRead = 0;
-let adShownAt = 0;
-const AD_EVERY = 3;
-const PROMO_EVERY = 5; // inject promo card every N articles
+// ── Persistent state (localStorage) ────────────────────────────────────────
 
-// ── Offer data ─────────────────────────────────────────────────────────────
+function loadState() {
+  try { return JSON.parse(localStorage.getItem('scaleup_v2') || '{}'); } catch(e) { return {}; }
+}
+function saveState(s) { localStorage.setItem('scaleup_v2', JSON.stringify(s)); }
 
-const OFFERS = [
-  {
-    type: 'course',
-    badge: '🎓 Course',
-    title: 'CPA Academy',
-    body: 'Want to earn $100 to $1k+ online? CPA Academy teaches you the exact methods 200+ students are using to generate consistent income — using just their phone or laptop.',
-    perks: [
-      '9 modules covering every major CPA network',
-      'Live classes with direct support',
-      'Works on smartphones and laptop',
-      'Results in as little as 21 days',
-    ],
-    prices: ['₦26,500 (Nigeria)', '$20 (International)'],
-    cta: 'Enroll Now →',
-    ctaUrl: 'https://www.osobakehinde.online',
-    secondary: null,
-  },
-  {
-    type: 'course',
-    badge: '🎬 Course',
-    title: 'Faceless YouTube Blueprint',
-    body: "Nigeria's #1 faceless YouTube course. Build a profitable YouTube channel without showing your face — using AI tools and proven systems.",
-    perks: [
-      'Full step-by-step faceless channel setup',
-      'AI content creation workflow',
-      'Monetisation strategies that work in Nigeria',
-      'Lifetime access + updates',
-    ],
-    prices: [],
-    cta: 'Get Access →',
-    ctaUrl: 'https://cpastores.osobakehinde.online/faceless',
-    secondary: null,
-  },
-  {
-    type: 'affiliate',
-    badge: '🤝 Affiliate',
-    title: 'Earn ₦5,300 Per Sale — CPA Academy',
-    body: 'Join the CPA Academy affiliate program. Just share your unique link — earn ₦5,300 automatically paid to your bank account on every sale. No selling required.',
-    perks: [
-      'Automatic bank transfer on every sale',
-      'Unique tracking link provided instantly',
-      'No experience needed',
-      'Promote to anyone with a phone or laptop',
-    ],
-    prices: ['₦5,300 per sale'],
-    cta: 'Join Affiliate Program →',
-    ctaUrl: 'https://www.osobakehinde.online/cpa-marketing-affiliate-registration/',
-    secondary: null,
-  },
-  {
-    type: 'affiliate',
-    badge: '🎬 Affiliate',
-    title: 'Earn ₦4,300 Per Sale — YouTube Blueprint',
-    body: 'Promote the Faceless YouTube Blueprint and earn ₦4,300 per sale — paid directly to your bank account. Share your link anywhere.',
-    perks: [
-      'Automatic bank payment per sale',
-      'High-converting sales page does the work',
-      'Share on WhatsApp, Telegram, social media',
-    ],
-    prices: ['₦4,300 per sale'],
-    cta: 'Join Affiliate Program →',
-    ctaUrl: 'https://cpastores.osobakehinde.online/youtube-automation-affiliates/',
-    secondary: null,
-  },
-  {
-    type: 'tool',
-    badge: '🛠 AI Tool',
-    title: 'TubeStack',
-    body: 'The all-in-one YouTube growth stack — AI-powered tools for scripting, SEO, thumbnail ideas, and more. Built for creators who want results faster.',
-    perks: [
-      'AI script & title generator',
-      'YouTube SEO toolkit',
-      'Thumbnail concept builder',
-      'Built for faceless creators',
-    ],
-    prices: [],
-    cta: 'Try TubeStack →',
-    ctaUrl: 'https://tubestack.online',
-    secondary: null,
-  },
+let S = loadState();
+if (!S.coins)       S.coins       = 0;
+if (!S.streak)      S.streak      = 0;
+if (!S.lastCheckin) S.lastCheckin = null;
+if (!S.lastRead)    S.lastRead    = {};
+if (!S.articlesRead) S.articlesRead = 0;
+if (!S.claimed)     S.claimed     = false;
+if (!S.claimCode)   S.claimCode   = null;
+if (!S.uid) {
+  // Stable ID: Telegram user ID if available, else random
+  const tgId = tg?.initDataUnsafe?.user?.id;
+  S.uid = tgId ? `TG${tgId}` : `U${Math.random().toString(36).slice(2,8).toUpperCase()}`;
+}
+saveState(S);
+
+// ── Coin system ─────────────────────────────────────────────────────────────
+
+function addCoins(n, label) {
+  S.coins += n;
+  saveState(S);
+  updateCoinsUI();
+  showToast(`+${n} 🪙 ${label}`);
+}
+
+function showToast(msg) {
+  const t = document.getElementById('coinToast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+function updateCoinsUI() {
+  document.getElementById('headerCoins').textContent = S.coins.toLocaleString();
+  const rwDisp = document.getElementById('rwCoinsDisplay');
+  if (rwDisp) rwDisp.textContent = S.coins.toLocaleString();
+  const pct = Math.min(100, (S.coins / TUBE_THRESHOLD) * 100);
+  const bar = document.getElementById('rwProgressBar');
+  if (bar) bar.style.width = pct + '%';
+  renderTubeCard();
+}
+
+// ── Daily check-in ──────────────────────────────────────────────────────────
+
+function todayKey() { return new Date().toISOString().slice(0,10); }
+
+function canCheckin() { return S.lastCheckin !== todayKey(); }
+
+function doCheckin() {
+  if (!canCheckin()) return;
+  const yesterday = new Date(); yesterday.setDate(yesterday.getDate()-1);
+  const yKey = yesterday.toISOString().slice(0,10);
+  S.streak = (S.lastCheckin === yKey) ? S.streak + 1 : 1;
+  S.lastCheckin = todayKey();
+  const bonus = S.streak >= 7 ? 50 : 0;
+  const earned = 10 + bonus;
+  saveState(S);
+  addCoins(earned, bonus ? `Check-in (+${bonus} streak bonus!)` : 'Daily check-in');
+  renderCheckinStrip();
+}
+
+function renderCheckinStrip() {
+  const el = document.getElementById('checkinStrip');
+  if (!el) return;
+  const done = !canCheckin();
+  el.innerHTML = `
+    <div class="checkin-strip">
+      <div class="ci-left">
+        <div class="ci-title">☀️ Daily Check-In</div>
+        <div class="ci-sub">${done ? 'Done for today. Come back tomorrow!' : 'Earn 10 coins. Bonus 50 after 7-day streak.'}</div>
+        ${S.streak > 0 ? `<div class="ci-streak">🔥 ${S.streak}-day streak</div>` : ''}
+      </div>
+      <button class="ci-btn" onclick="doCheckin()" ${done ? 'disabled' : ''}>
+        ${done ? '✓ Done' : '+10 🪙'}
+      </button>
+    </div>`;
+}
+
+// ── TubeStack reward card ────────────────────────────────────────────────────
+
+function genCode() {
+  if (S.claimCode) return S.claimCode;
+  // Derive a verifiable code from uid + coins threshold
+  const raw = (S.uid + TUBE_THRESHOLD + 'SCALEUP2024').split('').reduce((a,c) => a + c.charCodeAt(0), 0);
+  const alpha = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let code = 'TUBE-';
+  let seed = raw;
+  for (let i = 0; i < 6; i++) { code += alpha[seed % alpha.length]; seed = Math.floor(seed / alpha.length) + (seed * 31); }
+  S.claimCode = code;
+  saveState(S);
+  return code;
+}
+
+function renderTubeCard() {
+  const slot = document.getElementById('tubeCardSlot');
+  if (!slot) return;
+  const pct = Math.min(100, (S.coins / TUBE_THRESHOLD) * 100);
+  const remaining = Math.max(0, TUBE_THRESHOLD - S.coins);
+  const unlocked = S.coins >= TUBE_THRESHOLD;
+
+  if (!unlocked) {
+    slot.innerHTML = `
+      <div class="tube-card">
+        <div class="tube-locked">
+          <div class="tube-lock-icon">🔒</div>
+          <div class="tube-lock-title">TubeStack — 53 YouTube AI Tools</div>
+          <div class="tube-lock-sub">Earn 1,000 coins to unlock free access to TubeStack — the all-in-one platform for faceless YouTube creators.</div>
+          <div class="tube-progress-wrap"><div class="tube-progress-bar" style="width:${pct}%"></div></div>
+          <div class="tube-progress-label">${S.coins} / 1,000 coins — ${remaining} more to go</div>
+          <div class="tube-perks">
+            ${['AI Script Generator','Voice-Over Studio (Nigerian, British, US, AU accents)','NicheFinder — CPM & competition data','SEOFlow — titles, tags, descriptions','A/B Title Tester','+ 48 more tools'].map(p=>`<div class="tube-perk">✅ ${p}</div>`).join('')}
+          </div>
+        </div>
+      </div>`;
+  } else {
+    const code = genCode();
+    slot.innerHTML = `
+      <div class="tube-card">
+        <div class="tube-unlocked">
+          <div class="tube-unlocked-icon">🎉</div>
+          <div class="tube-unlocked-title">You unlocked TubeStack!</div>
+          <div class="tube-code-box">
+            <div class="tube-code">${code}</div>
+            <div class="tube-code-label">Your unique claim code</div>
+          </div>
+          <button class="tube-claim-btn" onclick="claimTubeStack('${code}')">
+            ${S.claimed ? '✓ Claimed — awaiting access' : '📩 Claim Free Access'}
+          </button>
+          <div class="tube-claimed-note">${S.claimed ? 'Your code has been sent. You\'ll receive access from @osobakehinde on Telegram.' : 'Tap to DM your code to @osobakehinde on Telegram. You\'ll receive free access within 24 hours.'}</div>
+        </div>
+      </div>`;
+  }
+}
+
+function claimTubeStack(code) {
+  S.claimed = true;
+  saveState(S);
+  const msg = encodeURIComponent(`Hi! I earned 1,000 coins on ScaleUp AI and I'm claiming my free TubeStack access.\n\nMy code: ${code}\nUser ID: ${S.uid}`);
+  if (tg) tg.openTelegramLink(`https://t.me/${OWNER_TG}?text=${msg}`);
+  else window.open(`https://t.me/${OWNER_TG}?text=${msg}`, '_blank');
+  renderTubeCard();
+}
+
+// ── Rewards page tasks list ──────────────────────────────────────────────────
+
+const TASKS = [
+  { icon:'☀️', title:'Daily Check-In',       desc:'Return every day',                  coins:'+10 / day',  key:'checkin' },
+  { icon:'🔥', title:'7-Day Streak Bonus',   desc:'Check in 7 days in a row',          coins:'+50 bonus',  key:'streak7' },
+  { icon:'📖', title:'Read an Article',      desc:'+5 coins per article (up to 5/day)', coins:'+5 each',    key:'read' },
+  { icon:'📤', title:'Share the Bot',        desc:'Tap Share to spread the word',      coins:'+20 once',   key:'share' },
+  { icon:'🏆', title:'Reach 1,000 Coins',   desc:'Unlock free TubeStack access',      coins:'🎁 TubeStack', key:'tube' },
 ];
+
+function renderRewardsPage() {
+  const tasksEl = document.getElementById('rwTasks');
+  if (!tasksEl) return;
+  tasksEl.innerHTML = TASKS.map(t => `
+    <div class="rw-task">
+      <div class="rw-task-icon">${t.icon}</div>
+      <div class="rw-task-info">
+        <div class="rw-task-title">${t.title}</div>
+        <div class="rw-task-desc">${t.desc}</div>
+      </div>
+      <div class="rw-task-coins">${t.coins}</div>
+    </div>`).join('');
+
+  // Fake leaderboard using current user + placeholders
+  const lbEl = document.getElementById('rwLeaderboard');
+  const name = tg?.initDataUnsafe?.user?.first_name || 'You';
+  const leaders = [
+    { name:'Chiamaka O.', coins: Math.max(S.coins + 420, 840), rank:1 },
+    { name:'Tunde A.',    coins: Math.max(S.coins + 210, 620), rank:2 },
+    { name:'Faith E.',    coins: Math.max(S.coins + 80,  440), rank:3 },
+    { name: name,         coins: S.coins,                       rank:4, you:true },
+  ].sort((a,b) => b.coins - a.coins).map((l,i) => ({ ...l, rank:i+1 }));
+
+  const medals = ['🥇','🥈','🥉'];
+  lbEl.innerHTML = leaders.map(l => `
+    <div class="rw-task lb-row ${l.you ? 'lb-you' : ''}">
+      <div class="lb-rank ${l.rank===1?'gold':l.rank===2?'silver':l.rank===3?'bronze':''}">${medals[l.rank-1]||l.rank}</div>
+      <div class="lb-name">${l.name}${l.you?' (You)':''}</div>
+      <div class="lb-coins">${l.coins.toLocaleString()} 🪙</div>
+    </div>`).join('');
+}
 
 // ── Page switching ──────────────────────────────────────────────────────────
 
 function switchPage(name) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-  if (name === 'articles') {
-    document.getElementById('pageArticles').classList.add('active');
-    document.getElementById('navArticles').classList.add('active');
-  } else {
-    document.getElementById('pageEarn').classList.add('active');
-    document.getElementById('navEarn').classList.add('active');
-    renderEarn();
-  }
+  ['articles','earn','rewards'].forEach(p => {
+    document.getElementById('page'+p.charAt(0).toUpperCase()+p.slice(1))?.classList.remove('active');
+    document.getElementById('nav'+p.charAt(0).toUpperCase()+p.slice(1))?.classList.remove('active');
+  });
+  const pageId = 'page'+name.charAt(0).toUpperCase()+name.slice(1);
+  const navId  = 'nav' +name.charAt(0).toUpperCase()+name.slice(1);
+  document.getElementById(pageId)?.classList.add('active');
+  document.getElementById(navId)?.classList.add('active');
+  if (name === 'earn')    renderEarn();
+  if (name === 'rewards') { updateCoinsUI(); renderRewardsPage(); }
 }
 
-function showEarnPage() {
-  closeArticle();
-  setTimeout(() => switchPage('earn'), 100);
+function showEarnPage() { closeArticle(); setTimeout(() => switchPage('earn'), 100); }
+
+// ── Share (give coins once) ─────────────────────────────────────────────────
+
+function shareBot() {
+  if (!S.shareCoinsGiven) { S.shareCoinsGiven = true; saveState(S); addCoins(20, 'Shared the bot'); }
+  const text = encodeURIComponent('⚡ ScaleUp AI — AI tools, earn online & free YouTube tools. Check it out!');
+  const url  = encodeURIComponent(BOT_URL);
+  if (tg) tg.openTelegramLink(`https://t.me/share/url?url=${url}&text=${text}`);
+  else window.open(`https://t.me/share/url?url=${url}&text=${text}`, '_blank');
 }
 
-// ── Earn page renderer ──────────────────────────────────────────────────────
+// ── Earn page (offers) ──────────────────────────────────────────────────────
+
+const OFFERS = [
+  { type:'course',    badge:'🎓 Course',    title:'CPA Academy',
+    body:'Earn $100–$1k+ online. 200+ students already doing it — in 21 days.',
+    perks:['9 modules covering every major CPA network','Live classes with direct support','Works on smartphones and laptop'],
+    prices:['₦26,500 (Nigeria)','$20 (International)'], cta:'Enroll Now →', ctaUrl:'https://www.osobakehinde.online' },
+  { type:'course',    badge:'🎬 Course',    title:'Faceless YouTube Blueprint',
+    body:"Nigeria's #1 faceless YouTube course. Build a channel without showing your face using AI.",
+    perks:['Full faceless channel setup','AI content workflow','Monetisation for Nigerian creators'],
+    prices:[], cta:'Get Access →', ctaUrl:'https://cpastores.osobakehinde.online/faceless' },
+  { type:'affiliate', badge:'🤝 Affiliate', title:'Earn ₦5,300/sale — CPA Academy',
+    body:'Share your link. Get ₦5,300 paid to your bank account on every sale.',
+    perks:['Automatic bank transfer','Unique tracking link instantly','No experience needed'],
+    prices:['₦5,300 per sale'], cta:'Join Affiliate →', ctaUrl:'https://www.osobakehinde.online/cpa-marketing-affiliate-registration/' },
+  { type:'affiliate', badge:'🎬 Affiliate', title:'Earn ₦4,300/sale — YouTube Blueprint',
+    body:'Promote the YouTube Blueprint and earn ₦4,300 per sale to your bank.',
+    perks:['Auto bank payment per sale','High-converting sales page','Share on WhatsApp, Telegram, social'],
+    prices:['₦4,300 per sale'], cta:'Join Affiliate →', ctaUrl:'https://cpastores.osobakehinde.online/youtube-automation-affiliates/' },
+  { type:'tool',      badge:'🛠 AI Tool',   title:'TubeStack — 53 YouTube AI Tools',
+    body:'AI scripts, SEO, voiceovers, thumbnails. Built for faceless creators. Earn it FREE with 1,000 coins!',
+    perks:['AI Script + Voice-Over Studio','NicheFinder & SEOFlow','A/B Title Tester','+ 48 more tools'],
+    prices:[], cta:'Earn Free or Buy Now →', ctaUrl:'https://tubestack.online' },
+];
 
 let earnRendered = false;
 function renderEarn() {
@@ -325,10 +540,8 @@ function renderEarn() {
   OFFERS.forEach(o => {
     const div = document.createElement('div');
     div.className = 'offer-card ' + o.type;
-    const perksHtml = o.perks.map(p => `<div class="oc-perk"><span>✅</span>${p}</div>`).join('');
-    const pricesHtml = o.prices.length
-      ? `<div class="oc-price">${o.prices.map(p => `<span class="price-tag">${p}</span>`).join('')}</div>`
-      : '';
+    const perksHtml  = o.perks.map(p => `<div class="oc-perk"><span>✅</span>${p}</div>`).join('');
+    const pricesHtml = o.prices.length ? `<div class="oc-price">${o.prices.map(p=>`<span class="price-tag">${p}</span>`).join('')}</div>` : '';
     div.innerHTML = `
       <div class="oc-top">
         <span class="oc-badge">${o.badge}</span>
@@ -338,146 +551,107 @@ function renderEarn() {
         ${pricesHtml}
       </div>
       <div class="oc-divider"></div>
-      <div class="oc-bottom">
-        <a class="oc-cta" href="${o.ctaUrl}" target="_blank">${o.cta}</a>
-      </div>`;
+      <div class="oc-bottom"><a class="oc-cta" href="${o.ctaUrl}" target="_blank">${o.cta}</a></div>`;
     feed.appendChild(div);
   });
 }
 
-// ── Article feed ────────────────────────────────────────────────────────────
+// ── Helpers ─────────────────────────────────────────────────────────────────
 
 function inferCategory(title) {
   const t = title.toLowerCase();
-  if (t.includes('shopif') || t.includes('ecomm') || t.includes('store')) return 'Ecommerce';
-  if (t.includes('market') || t.includes('social') || t.includes('content')) return 'Marketing';
-  if (t.includes('seo') || t.includes('blog') || t.includes('keyword')) return 'SEO';
-  if (t.includes('business') || t.includes('startup')) return 'AI Business';
+  if (t.includes('shopif')||t.includes('ecomm')||t.includes('store')) return 'Ecommerce';
+  if (t.includes('market')||t.includes('social')||t.includes('content')) return 'Marketing';
+  if (t.includes('seo')||t.includes('blog')||t.includes('keyword')) return 'SEO';
+  if (t.includes('business')||t.includes('startup')) return 'AI Business';
   return 'AI Tools';
 }
-
-function stripHtml(h) {
-  return (h||'').replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/&#\d+;/g,'').trim();
+function stripHtml(h) { return (h||'').replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/&#\d+;/g,'').trim(); }
+function timeAgo(d) {
+  const s=(Date.now()-new Date(d))/1000;
+  if(s<3600) return Math.floor(s/60)+'m ago';
+  if(s<86400) return Math.floor(s/3600)+'h ago';
+  return Math.floor(s/86400)+'d ago';
 }
 
-function timeAgo(dateStr) {
-  const diff = (Date.now() - new Date(dateStr)) / 1000;
-  if (diff < 3600)  return Math.floor(diff/60) + 'm ago';
-  if (diff < 86400) return Math.floor(diff/3600) + 'h ago';
-  return Math.floor(diff/86400) + 'd ago';
-}
+// ── Article feed ─────────────────────────────────────────────────────────────
 
-// Rotating promo snippets injected into the article feed
-const FEED_PROMOS = [
-  { badge:'💰 Earn Online', title:'Make $100–$1k+ with CPA Marketing', sub:'200+ students already doing it. Join CPA Academy and get results in 21 days.', url:'https://www.osobakehinde.online' },
-  { badge:'🎬 Earn ₦4,300/sale', title:'Promote the Faceless YouTube Blueprint', sub:'Share one link. Earn ₦4,300 per sale, paid to your bank account automatically.', url:'https://cpastores.osobakehinde.online/youtube-automation-affiliates/' },
-  { badge:'🤝 Affiliate', title:'Earn ₦5,300 per sale — CPA Academy', sub:'No experience needed. Just share your link and collect your commission.', url:'https://www.osobakehinde.online/cpa-marketing-affiliate-registration/' },
-  { badge:'🛠 AI Tool', title:'TubeStack — Grow Your YouTube Faster', sub:'AI scripts, SEO, thumbnails. Built for faceless creators.', url:'https://tubestack.online' },
+let allPosts=[], promoIdx=0;
+const PROMO_EVERY=5;
+const PROMOS=[
+  { badge:'💰 Earn Online', title:'Make $100–$1k+ with CPA Marketing', sub:'200+ students already doing it.', url:'https://www.osobakehinde.online' },
+  { badge:'🎬 Earn ₦4,300/sale', title:'Promote the Faceless YouTube Blueprint', sub:'Share one link, get paid per sale.', url:'https://cpastores.osobakehinde.online/youtube-automation-affiliates/' },
+  { badge:'🤝 Affiliate', title:'Earn ₦5,300/sale — CPA Academy', sub:'Share your link, collect per commission.', url:'https://www.osobakehinde.online/cpa-marketing-affiliate-registration/' },
+  { badge:'🏆 Earn Free', title:'1,000 Coins = Free TubeStack Access', sub:'Read articles daily and earn free YouTube AI tools.', url:null, action:'rewards' },
 ];
-let promoIdx = 0;
 
 function makePromoCard() {
-  const p = FEED_PROMOS[promoIdx % FEED_PROMOS.length];
-  promoIdx++;
+  const p = PROMOS[promoIdx % PROMOS.length]; promoIdx++;
   const div = document.createElement('div');
-  div.className = 'promo-card';
-  div.innerHTML = `
-    <span class="pc-badge">${p.badge}</span>
-    <div class="pc-title">${p.title}</div>
-    <div class="pc-sub">${p.sub}</div>
-    <button class="pc-btn" onclick="openLink('${p.url}')">Learn More →</button>`;
+  div.className='promo-card';
+  div.innerHTML=`<span class="pc-badge">${p.badge}</span><div class="pc-title">${p.title}</div><div class="pc-sub">${p.sub}</div><button class="pc-btn">${p.action?'See Rewards →':'Learn More →'}</button>`;
+  div.querySelector('.pc-btn').onclick = () => p.action ? switchPage(p.action) : openLink(p.url);
   return div;
 }
 
 function openLink(url) {
+  if (!url) return;
   if (tg) tg.openLink(url);
-  else window.open(url, '_blank');
+  else window.open(url,'_blank');
 }
 
 function renderFeed(posts) {
-  const feed = document.getElementById('feed');
-  if (!posts.length) {
-    feed.innerHTML = '<div class="empty"><div class="empty-icon">📭</div><p>No articles yet.</p></div>';
-    return;
-  }
-  feed.innerHTML = '';
-  promoIdx = 0;
-  posts.forEach((post, i) => {
+  const feed=document.getElementById('feed');
+  if (!posts.length) { feed.innerHTML='<div class="empty"><div class="empty-icon">📭</div><p>No articles yet.</p></div>'; return; }
+  feed.innerHTML=''; promoIdx=0;
+  posts.forEach((post,i) => {
     const title   = stripHtml(post.title.rendered);
-    const excerpt = stripHtml(post.excerpt.rendered).substring(0, 120);
-    const img     = post._embedded?.['wp:featuredmedia']?.[0]?.source_url || '';
+    const excerpt = stripHtml(post.excerpt.rendered).substring(0,120);
+    const img     = post._embedded?.['wp:featuredmedia']?.[0]?.source_url||'';
     const cat     = inferCategory(title);
     const date    = timeAgo(post.date);
-
-    // Monetag reward banner every AD_EVERY cards
-    if (i > 0 && i % AD_EVERY === 0) feed.appendChild(makeRewardBanner());
-    // Promo card every PROMO_EVERY cards (offset so it doesn't clash with reward banner)
-    if (i > 0 && i % PROMO_EVERY === 0) feed.appendChild(makePromoCard());
-
-    const card = document.createElement('div');
-    card.className = 'card' + (i === 0 ? ' featured' : '');
-    card.innerHTML = `
-      ${img ? `<img class="card-img" src="${img}" alt="" loading="lazy" onerror="this.style.display='none'">` : ''}
+    if (i>0 && i%PROMO_EVERY===0) feed.appendChild(makePromoCard());
+    const card=document.createElement('div');
+    card.className='card'+(i===0?' featured':'');
+    card.innerHTML=`
+      ${img?`<img class="card-img" src="${img}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}
       <div class="card-body">
         <span class="card-tag">${cat}</span>
         <div class="card-title">${title}</div>
         <div class="card-excerpt">${excerpt}</div>
-        <div class="card-meta">
-          <span class="card-date">${date}</span>
-          <button class="read-btn">Read →</button>
-        </div>
+        <div class="card-meta"><span class="card-date">${date}</span><button class="read-btn">Read →</button></div>
       </div>`;
-    card.addEventListener('click', () => openArticle(post));
+    card.addEventListener('click',()=>openArticle(post));
     feed.appendChild(card);
   });
 }
 
-function makeRewardBanner() {
-  const div = document.createElement('div');
-  div.className = 'reward-banner';
-  div.innerHTML = `
-    <div class="rb-icon">🎁</div>
-    <div class="rb-title">Unlock More Articles</div>
-    <div class="rb-sub">Watch a quick ad to continue reading for free</div>
-    <button class="rb-btn" onclick="showRewardedAd(this.closest('.reward-banner'))">Watch &amp; Unlock</button>`;
-  return div;
-}
-
-function showRewardedAd(banner) {
-  if (MONETAG_ZONE && window.show_9279915) {
-    window.show_9279915(MONETAG_ZONE).then(() => {
-      if (banner) banner.remove();
-      tg?.showAlert?.('✅ Unlocked! Keep reading.');
-    }).catch(() => { if (banner) banner.remove(); });
-  } else {
-    if (banner) banner.remove();
-  }
-}
-
-// ── Article view ────────────────────────────────────────────────────────────
+// ── Article view ─────────────────────────────────────────────────────────────
 
 function openArticle(post) {
   const title   = stripHtml(post.title.rendered);
-  const excerpt = stripHtml(post.excerpt.rendered).substring(0, 400);
-  const img     = post._embedded?.['wp:featuredmedia']?.[0]?.source_url || '';
+  const excerpt = stripHtml(post.excerpt.rendered).substring(0,400);
+  const img     = post._embedded?.['wp:featuredmedia']?.[0]?.source_url||'';
   const cat     = inferCategory(title);
-
   document.getElementById('avTitleShort').textContent = title;
   document.getElementById('avTitle').textContent      = title;
   document.getElementById('avExcerpt').textContent    = excerpt;
   document.getElementById('avTag').textContent        = cat;
   document.getElementById('avCta').href               = post.link;
-  const avImg = document.getElementById('avImg');
-  if (img) { avImg.src = img; avImg.style.display = 'block'; } else { avImg.style.display = 'none'; }
-
+  const avImg=document.getElementById('avImg');
+  if(img){avImg.src=img;avImg.style.display='block';}else{avImg.style.display='none';}
   document.getElementById('articleView').classList.add('open');
   tg?.BackButton?.show?.();
-  tg?.BackButton?.onClick?.(() => closeArticle());
+  tg?.BackButton?.onClick?.(()=>closeArticle());
 
-  articlesRead++;
-  if (articlesRead - adShownAt >= AD_EVERY) {
-    adShownAt = articlesRead;
-    setTimeout(() => showRewardedAd(null), 2500);
+  // Coins for reading (up to 5 per day, 1 per unique article)
+  const dayKey = todayKey();
+  const readToday = Object.values(S.lastRead).filter(v => v===dayKey).length;
+  if (!S.lastRead[post.id] && readToday < 5) {
+    S.lastRead[post.id] = dayKey;
+    S.articlesRead++;
+    saveState(S);
+    addCoins(5,'Article read');
   }
 }
 
@@ -486,31 +660,26 @@ function closeArticle() {
   tg?.BackButton?.hide?.();
 }
 
-function shareBot() {
-  const text = encodeURIComponent('⚡ ScaleUp AI — AI tools, strategies & insights. Plus learn how to earn online. Check it out!');
-  const url  = encodeURIComponent(BOT_URL);
-  if (tg) tg.openTelegramLink(`https://t.me/share/url?url=${url}&text=${text}`);
-  else window.open(`https://t.me/share/url?url=${url}&text=${text}`, '_blank');
-}
-
-// ── Category filter ─────────────────────────────────────────────────────────
+// ── Category filter ──────────────────────────────────────────────────────────
 
 document.getElementById('cats').addEventListener('click', e => {
-  const btn = e.target.closest('.cat');
-  if (!btn) return;
-  document.querySelectorAll('.cat').forEach(c => c.classList.remove('active'));
+  const btn=e.target.closest('.cat'); if(!btn) return;
+  document.querySelectorAll('.cat').forEach(c=>c.classList.remove('active'));
   btn.classList.add('active');
-  const cat = btn.dataset.cat;
-  renderFeed(cat === 'all' ? allPosts : allPosts.filter(p => inferCategory(stripHtml(p.title.rendered)) === cat));
+  const cat=btn.dataset.cat;
+  renderFeed(cat==='all'?allPosts:allPosts.filter(p=>inferCategory(stripHtml(p.title.rendered))===cat));
 });
 
-// ── Boot ────────────────────────────────────────────────────────────────────
+// ── Boot ─────────────────────────────────────────────────────────────────────
+
+renderCheckinStrip();
+updateCoinsUI();
 
 fetch(WP_API)
-  .then(r => r.json())
-  .then(posts => { allPosts = posts; renderFeed(posts); })
-  .catch(() => {
-    document.getElementById('feed').innerHTML =
+  .then(r=>r.json())
+  .then(posts=>{allPosts=posts;renderFeed(posts);})
+  .catch(()=>{
+    document.getElementById('feed').innerHTML=
       '<div class="empty"><div class="empty-icon">⚠️</div><p>Could not load articles.<br>Check your connection.</p></div>';
   });
 </script>
