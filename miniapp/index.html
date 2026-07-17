@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>ScaleUp AI</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+
+:root {
+  --bg: #0f0f13;
+  --card: #1a1a24;
+  --border: #2a2a38;
+  --accent: #FF2D55;
+  --accent2: #7B2FFF;
+  --text: #f0f0f0;
+  --muted: #888;
+  --tag-bg: rgba(255,45,85,.15);
+  --tag-color: #FF2D55;
+}
+
+html, body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; min-height: 100vh; }
+
+/* ── Header ── */
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(15,15,19,.95); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 16px 10px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.header-logo { display: flex; align-items: center; gap: 10px; }
+.logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg,var(--accent),var(--accent2)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+.logo-text { font-size: 17px; font-weight: 700; letter-spacing: -.02em; }
+.logo-sub { font-size: 10px; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+.share-btn { background: var(--tag-bg); color: var(--accent); border: 1px solid rgba(255,45,85,.3); border-radius: 20px; padding: 6px 14px; font-size: 13px; font-weight: 600; cursor: pointer; }
+
+/* ── Category pills ── */
+.cats { display: flex; gap: 8px; padding: 12px 16px; overflow-x: auto; scrollbar-width: none; border-bottom: 1px solid var(--border); }
+.cats::-webkit-scrollbar { display: none; }
+.cat { flex-shrink: 0; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; background: var(--card); color: var(--muted); border: 1px solid var(--border); transition: all .2s; }
+.cat.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* ── Feed ── */
+.feed { padding: 12px 16px; display: flex; flex-direction: column; gap: 12px; }
+
+.card {
+  background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; cursor: pointer;
+  transition: transform .15s, border-color .15s;
+  animation: fadeIn .3s ease;
+}
+.card:active { transform: scale(.98); }
+.card.featured { border-color: rgba(255,45,85,.4); }
+
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+.card-img { width: 100%; height: 180px; object-fit: cover; display: block; background: var(--border); }
+.card-img.loading { background: linear-gradient(90deg, var(--card) 25%, var(--border) 50%, var(--card) 75%); background-size: 200%; animation: shimmer 1.5s infinite; }
+@keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+.card-body { padding: 14px; }
+.card-tag { display: inline-block; background: var(--tag-bg); color: var(--tag-color); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px; }
+.card-title { font-size: 16px; font-weight: 700; line-height: 1.35; margin-bottom: 8px; letter-spacing: -.01em; }
+.card-excerpt { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.card-meta { display: flex; align-items: center; justify-content: space-between; }
+.card-date { font-size: 11px; color: var(--muted); }
+.read-btn { background: var(--accent); color: #fff; border: none; border-radius: 8px; padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; }
+
+/* ── Rewarded ad trigger ── */
+.reward-banner {
+  background: linear-gradient(135deg, rgba(123,47,255,.2), rgba(255,45,85,.2));
+  border: 1px solid rgba(123,47,255,.4);
+  border-radius: 16px; padding: 16px;
+  text-align: center; cursor: pointer;
+  animation: fadeIn .3s ease;
+}
+.reward-banner .rb-icon { font-size: 28px; margin-bottom: 8px; }
+.reward-banner .rb-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.reward-banner .rb-sub { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+.reward-banner .rb-btn { background: linear-gradient(90deg,var(--accent2),var(--accent)); color: #fff; border: none; border-radius: 20px; padding: 10px 24px; font-size: 14px; font-weight: 700; cursor: pointer; }
+
+/* ── Loading / empty states ── */
+.spinner { display: flex; justify-content: center; padding: 48px; }
+.spinner-ring { width: 36px; height: 36px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.empty { text-align: center; padding: 48px 24px; color: var(--muted); }
+.empty-icon { font-size: 40px; margin-bottom: 12px; }
+
+/* ── Article view ── */
+.article-view { display: none; position: fixed; inset: 0; background: var(--bg); z-index: 200; overflow-y: auto; }
+.article-view.open { display: block; }
+.av-header { position: sticky; top: 0; background: rgba(15,15,19,.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+.av-back { background: var(--card); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 6px 12px; font-size: 14px; cursor: pointer; }
+.av-title-short { font-size: 15px; font-weight: 600; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.av-img { width: 100%; max-height: 240px; object-fit: cover; display: block; }
+.av-body { padding: 20px 16px; }
+.av-tag { display: inline-block; background: var(--tag-bg); color: var(--tag-color); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; margin-bottom: 12px; }
+.av-h1 { font-size: 22px; font-weight: 800; line-height: 1.3; margin-bottom: 16px; letter-spacing: -.02em; }
+.av-excerpt { font-size: 15px; color: rgba(240,240,240,.8); line-height: 1.7; margin-bottom: 24px; }
+.av-cta { display: block; background: var(--accent); color: #fff; text-align: center; text-decoration: none; padding: 14px; border-radius: 12px; font-size: 16px; font-weight: 700; margin-bottom: 24px; }
+.av-share { display: block; background: var(--card); color: var(--text); text-align: center; border: 1px solid var(--border); padding: 12px; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<!-- Article view overlay -->
+<div class="article-view" id="articleView">
+  <div class="av-header">
+    <button class="av-back" onclick="closeArticle()">← Back</button>
+    <span class="av-title-short" id="avTitleShort"></span>
+  </div>
+  <img class="av-img" id="avImg" src="" alt="">
+  <div class="av-body">
+    <span class="av-tag" id="avTag"></span>
+    <h1 class="av-h1" id="avTitle"></h1>
+    <p class="av-excerpt" id="avExcerpt"></p>
+    <a class="av-cta" id="avCta" href="#" target="_blank">Read Full Article →</a>
+    <button class="av-share" onclick="shareBot()">📤 Share ScaleUp AI with a friend</button>
+  </div>
+</div>
+
+<!-- Main app -->
+<div id="mainApp">
+  <div class="header">
+    <div class="header-logo">
+      <div class="logo-icon">⚡</div>
+      <div>
+        <div class="logo-text">ScaleUp AI</div>
+        <div class="logo-sub">AI Tools &amp; Strategies</div>
+      </div>
+    </div>
+    <button class="share-btn" onclick="shareBot()">Share ↗</button>
+  </div>
+
+  <div class="cats" id="cats">
+    <div class="cat active" data-cat="all">All</div>
+    <div class="cat" data-cat="AI Tools">AI Tools</div>
+    <div class="cat" data-cat="AI Business">Business</div>
+    <div class="cat" data-cat="Ecommerce">Ecommerce</div>
+    <div class="cat" data-cat="Marketing">Marketing</div>
+    <div class="cat" data-cat="SEO">SEO</div>
+  </div>
+
+  <div class="feed" id="feed">
+    <div class="spinner"><div class="spinner-ring"></div></div>
+  </div>
+</div>
+
+<script>
+const tg = window.Telegram?.WebApp;
+if (tg) { tg.ready(); tg.expand(); }
+
+const WP_API  = 'https://scaleupai.online/wp-json/wp/v2/posts?_embed&per_page=30&orderby=date&order=desc&status=publish';
+const BOT_URL = 'https://t.me/ScaleUpAIBot'; // update to actual bot username
+
+let allPosts = [];
+let articlesRead = 0;
+let adShownAt   = 0;
+const AD_EVERY  = 3; // show rewarded ad every 3 articles opened
+
+// Monetag TMA SDK — zone ID set after user provides it
+const MONETAG_ZONE = window.MONETAG_ZONE_ID || null;
+
+function inferCategory(title) {
+  const t = title.toLowerCase();
+  if (t.includes('shopif') || t.includes('ecomm') || t.includes('store')) return 'Ecommerce';
+  if (t.includes('market') || t.includes('social') || t.includes('content')) return 'Marketing';
+  if (t.includes('seo') || t.includes('blog') || t.includes('keyword')) return 'SEO';
+  if (t.includes('business') || t.includes('startup')) return 'AI Business';
+  return 'AI Tools';
+}
+
+function stripHtml(h) {
+  return (h||'').replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/&#\d+;/g,'').trim();
+}
+
+function timeAgo(dateStr) {
+  const diff = (Date.now() - new Date(dateStr)) / 1000;
+  if (diff < 3600)  return Math.floor(diff/60) + 'm ago';
+  if (diff < 86400) return Math.floor(diff/3600) + 'h ago';
+  return Math.floor(diff/86400) + 'd ago';
+}
+
+function renderFeed(posts) {
+  const feed = document.getElementById('feed');
+  if (!posts.length) {
+    feed.innerHTML = '<div class="empty"><div class="empty-icon">📭</div><p>No articles yet.</p></div>';
+    return;
+  }
+  feed.innerHTML = '';
+  posts.forEach((post, i) => {
+    const title   = stripHtml(post.title.rendered);
+    const excerpt = stripHtml(post.excerpt.rendered).substring(0, 120);
+    const img     = post._embedded?.['wp:featuredmedia']?.[0]?.source_url || '';
+    const cat     = inferCategory(title);
+    const date    = timeAgo(post.date);
+    const featured = i === 0;
+
+    // Insert reward banner every AD_EVERY cards
+    if (i > 0 && i % AD_EVERY === 0) {
+      feed.appendChild(makeRewardBanner());
+    }
+
+    const card = document.createElement('div');
+    card.className = 'card' + (featured ? ' featured' : '');
+    card.innerHTML = `
+      ${img ? `<img class="card-img" src="${img}" alt="" loading="lazy" onerror="this.style.display='none'">` : ''}
+      <div class="card-body">
+        <span class="card-tag">${cat}</span>
+        <div class="card-title">${title}</div>
+        <div class="card-excerpt">${excerpt}</div>
+        <div class="card-meta">
+          <span class="card-date">${date}</span>
+          <button class="read-btn">Read →</button>
+        </div>
+      </div>`;
+    card.addEventListener('click', () => openArticle(post));
+    feed.appendChild(card);
+  });
+}
+
+function makeRewardBanner() {
+  const div = document.createElement('div');
+  div.className = 'reward-banner';
+  div.innerHTML = `
+    <div class="rb-icon">🎁</div>
+    <div class="rb-title">Unlock More Articles</div>
+    <div class="rb-sub">Watch a quick ad to continue reading for free</div>
+    <button class="rb-btn" onclick="showRewardedAd(this.closest('.reward-banner'))">Watch &amp; Unlock</button>`;
+  return div;
+}
+
+function showRewardedAd(banner) {
+  if (MONETAG_ZONE && window.show_9279915) {
+    // Monetag rewarded popup SDK call
+    window.show_9279915(MONETAG_ZONE).then(() => {
+      if (banner) banner.remove();
+      tg?.showAlert?.('✅ Unlocked! Keep reading.');
+    }).catch(() => {
+      if (banner) banner.remove();
+    });
+  } else {
+    // SDK not yet configured — just dismiss
+    if (banner) banner.remove();
+  }
+}
+
+function openArticle(post) {
+  const title   = stripHtml(post.title.rendered);
+  const excerpt = stripHtml(post.excerpt.rendered).substring(0, 400);
+  const img     = post._embedded?.['wp:featuredmedia']?.[0]?.source_url || '';
+  const cat     = inferCategory(title);
+
+  document.getElementById('avTitleShort').textContent = title;
+  document.getElementById('avTitle').textContent      = title;
+  document.getElementById('avExcerpt').textContent    = excerpt;
+  document.getElementById('avTag').textContent        = cat;
+  document.getElementById('avCta').href               = post.link;
+  const avImg = document.getElementById('avImg');
+  if (img) { avImg.src = img; avImg.style.display = 'block'; } else { avImg.style.display = 'none'; }
+
+  document.getElementById('articleView').classList.add('open');
+  document.getElementById('mainApp').style.overflow = 'hidden';
+
+  tg?.BackButton?.show?.();
+  tg?.BackButton?.onClick?.(() => closeArticle());
+
+  articlesRead++;
+  if (articlesRead - adShownAt >= AD_EVERY) {
+    adShownAt = articlesRead;
+    setTimeout(() => showRewardedAd(null), 2000);
+  }
+}
+
+function closeArticle() {
+  document.getElementById('articleView').classList.remove('open');
+  document.getElementById('mainApp').style.overflow = '';
+  tg?.BackButton?.hide?.();
+}
+
+function shareBot() {
+  const text = encodeURIComponent('🤖 ScaleUp AI — AI tools, strategies & insights for modern professionals. Check it out!');
+  const url  = encodeURIComponent(BOT_URL);
+  if (tg) {
+    tg.openTelegramLink(`https://t.me/share/url?url=${url}&text=${text}`);
+  } else {
+    window.open(`https://t.me/share/url?url=${url}&text=${text}`, '_blank');
+  }
+}
+
+// Category filter
+document.getElementById('cats').addEventListener('click', e => {
+  const btn = e.target.closest('.cat');
+  if (!btn) return;
+  document.querySelectorAll('.cat').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  const cat = btn.dataset.cat;
+  const filtered = cat === 'all' ? allPosts : allPosts.filter(p => inferCategory(stripHtml(p.title.rendered)) === cat);
+  renderFeed(filtered);
+});
+
+// Fetch posts
+fetch(WP_API)
+  .then(r => r.json())
+  .then(posts => {
+    allPosts = posts;
+    renderFeed(posts);
+  })
+  .catch(() => {
+    document.getElementById('feed').innerHTML =
+      '<div class="empty"><div class="empty-icon">⚠️</div><p>Could not load articles.<br>Check your connection.</p></div>';
+  });
+</script>
+</body>
+</html>
