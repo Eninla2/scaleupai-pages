@@ -8,99 +8,121 @@
 <script>(function(s){s.dataset.zone='11337001',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-
 :root {
-  --bg: #0f0f13;
-  --card: #1a1a24;
-  --border: #2a2a38;
-  --accent: #FF2D55;
-  --accent2: #7B2FFF;
-  --text: #f0f0f0;
-  --muted: #888;
-  --tag-bg: rgba(255,45,85,.15);
-  --tag-color: #FF2D55;
+  --bg:#0f0f13; --card:#1a1a24; --card2:#1e1e2e; --border:#2a2a38;
+  --accent:#FF2D55; --accent2:#7B2FFF; --gold:#F5A623; --green:#00C853;
+  --text:#f0f0f0; --muted:#888; --tag-bg:rgba(255,45,85,.15); --tag-color:#FF2D55;
 }
+html,body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
 
-html, body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; min-height: 100vh; }
+/* ── Nav tabs ── */
+.nav{position:fixed;bottom:0;left:0;right:0;z-index:100;background:rgba(15,15,19,.97);backdrop-filter:blur(16px);border-top:1px solid var(--border);display:flex}
+.nav-btn{flex:1;padding:10px 0 14px;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;color:var(--muted);font-size:10px;font-weight:600;letter-spacing:.04em;transition:color .2s}
+.nav-btn .ni{font-size:20px}
+.nav-btn.active{color:var(--accent)}
+.nav-btn.earn-btn.active{color:var(--gold)}
 
 /* ── Header ── */
-.header {
-  position: sticky; top: 0; z-index: 100;
-  background: rgba(15,15,19,.95); backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  padding: 14px 16px 10px;
-  display: flex; align-items: center; justify-content: space-between;
-}
-.header-logo { display: flex; align-items: center; gap: 10px; }
-.logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg,var(--accent),var(--accent2)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
-.logo-text { font-size: 17px; font-weight: 700; letter-spacing: -.02em; }
-.logo-sub { font-size: 10px; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
-.share-btn { background: var(--tag-bg); color: var(--accent); border: 1px solid rgba(255,45,85,.3); border-radius: 20px; padding: 6px 14px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.header{position:sticky;top:0;z-index:50;background:rgba(15,15,19,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:14px 16px 10px;display:flex;align-items:center;justify-content:space-between}
+.header-logo{display:flex;align-items:center;gap:10px}
+.logo-icon{width:32px;height:32px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px}
+.logo-text{font-size:17px;font-weight:700;letter-spacing:-.02em}
+.logo-sub{font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.share-btn{background:var(--tag-bg);color:var(--accent);border:1px solid rgba(255,45,85,.3);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:600;cursor:pointer}
+
+/* ── Pages ── */
+.page{display:none;padding-bottom:80px}
+.page.active{display:block}
 
 /* ── Category pills ── */
-.cats { display: flex; gap: 8px; padding: 12px 16px; overflow-x: auto; scrollbar-width: none; border-bottom: 1px solid var(--border); }
-.cats::-webkit-scrollbar { display: none; }
-.cat { flex-shrink: 0; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; background: var(--card); color: var(--muted); border: 1px solid var(--border); transition: all .2s; }
-.cat.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.cats{display:flex;gap:8px;padding:12px 16px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--border)}
+.cats::-webkit-scrollbar{display:none}
+.cat{flex-shrink:0;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;background:var(--card);color:var(--muted);border:1px solid var(--border);transition:all .2s}
+.cat.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 
-/* ── Feed ── */
-.feed { padding: 12px 16px; display: flex; flex-direction: column; gap: 12px; }
+/* ── Article feed ── */
+.feed{padding:12px 16px;display:flex;flex-direction:column;gap:12px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .15s,border-color .15s;animation:fadeIn .3s ease}
+.card:active{transform:scale(.98)}
+.card.featured{border-color:rgba(255,45,85,.4)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.card-img{width:100%;height:180px;object-fit:cover;display:block;background:var(--border)}
+.card-body{padding:14px}
+.card-tag{display:inline-block;background:var(--tag-bg);color:var(--tag-color);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-bottom:8px}
+.card-title{font-size:16px;font-weight:700;line-height:1.35;margin-bottom:8px;letter-spacing:-.01em}
+.card-excerpt{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card-meta{display:flex;align-items:center;justify-content:space-between}
+.card-date{font-size:11px;color:var(--muted)}
+.read-btn{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;font-weight:700;cursor:pointer}
 
-.card {
-  background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; cursor: pointer;
-  transition: transform .15s, border-color .15s;
-  animation: fadeIn .3s ease;
-}
-.card:active { transform: scale(.98); }
-.card.featured { border-color: rgba(255,45,85,.4); }
+/* ── Promo card in feed ── */
+.promo-card{background:linear-gradient(135deg,rgba(245,166,35,.12),rgba(123,47,255,.12));border:1px solid rgba(245,166,35,.35);border-radius:16px;padding:16px;cursor:pointer;animation:fadeIn .3s ease}
+.promo-card .pc-badge{display:inline-block;background:var(--gold);color:#000;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-bottom:10px}
+.promo-card .pc-title{font-size:15px;font-weight:800;margin-bottom:6px;line-height:1.3}
+.promo-card .pc-sub{font-size:12px;color:rgba(240,240,240,.7);margin-bottom:12px;line-height:1.5}
+.promo-card .pc-btn{display:inline-block;background:var(--gold);color:#000;font-size:13px;font-weight:800;padding:9px 20px;border-radius:20px;border:none;cursor:pointer}
 
-@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+/* ── Monetag reward banner ── */
+.reward-banner{background:linear-gradient(135deg,rgba(123,47,255,.2),rgba(255,45,85,.2));border:1px solid rgba(123,47,255,.4);border-radius:16px;padding:16px;text-align:center;cursor:pointer;animation:fadeIn .3s ease}
+.rb-icon{font-size:28px;margin-bottom:8px}
+.rb-title{font-size:15px;font-weight:700;margin-bottom:4px}
+.rb-sub{font-size:12px;color:var(--muted);margin-bottom:12px}
+.rb-btn{background:linear-gradient(90deg,var(--accent2),var(--accent));color:#fff;border:none;border-radius:20px;padding:10px 24px;font-size:14px;font-weight:700;cursor:pointer}
 
-.card-img { width: 100%; height: 180px; object-fit: cover; display: block; background: var(--border); }
-.card-img.loading { background: linear-gradient(90deg, var(--card) 25%, var(--border) 50%, var(--card) 75%); background-size: 200%; animation: shimmer 1.5s infinite; }
-@keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+/* ── Earn page ── */
+.earn-header{padding:20px 16px 4px}
+.earn-header h2{font-size:20px;font-weight:800;letter-spacing:-.02em}
+.earn-header p{font-size:13px;color:var(--muted);margin-top:4px}
+.earn-feed{padding:12px 16px;display:flex;flex-direction:column;gap:14px}
 
-.card-body { padding: 14px; }
-.card-tag { display: inline-block; background: var(--tag-bg); color: var(--tag-color); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px; }
-.card-title { font-size: 16px; font-weight: 700; line-height: 1.35; margin-bottom: 8px; letter-spacing: -.01em; }
-.card-excerpt { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.card-meta { display: flex; align-items: center; justify-content: space-between; }
-.card-date { font-size: 11px; color: var(--muted); }
-.read-btn { background: var(--accent); color: #fff; border: none; border-radius: 8px; padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; }
+.offer-card{border-radius:18px;overflow:hidden;animation:fadeIn .3s ease}
+.offer-card.course{background:linear-gradient(145deg,#1a1030,#16102a);border:1px solid rgba(123,47,255,.4)}
+.offer-card.affiliate{background:linear-gradient(145deg,#0f1a0f,#121e12);border:1px solid rgba(0,200,83,.35)}
+.offer-card.tool{background:linear-gradient(145deg,#0f1520,#121822);border:1px solid rgba(41,182,246,.35)}
 
-/* ── Rewarded ad trigger ── */
-.reward-banner {
-  background: linear-gradient(135deg, rgba(123,47,255,.2), rgba(255,45,85,.2));
-  border: 1px solid rgba(123,47,255,.4);
-  border-radius: 16px; padding: 16px;
-  text-align: center; cursor: pointer;
-  animation: fadeIn .3s ease;
-}
-.reward-banner .rb-icon { font-size: 28px; margin-bottom: 8px; }
-.reward-banner .rb-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-.reward-banner .rb-sub { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
-.reward-banner .rb-btn { background: linear-gradient(90deg,var(--accent2),var(--accent)); color: #fff; border: none; border-radius: 20px; padding: 10px 24px; font-size: 14px; font-weight: 700; cursor: pointer; }
+.oc-top{padding:18px 18px 0}
+.oc-badge{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:4px;margin-bottom:10px}
+.course .oc-badge{background:rgba(123,47,255,.25);color:#a97cff}
+.affiliate .oc-badge{background:rgba(0,200,83,.2);color:#00C853}
+.tool .oc-badge{background:rgba(41,182,246,.2);color:#29B6F6}
+.oc-title{font-size:18px;font-weight:800;line-height:1.25;letter-spacing:-.02em;margin-bottom:8px}
+.oc-body{font-size:13px;color:rgba(240,240,240,.75);line-height:1.65;margin-bottom:12px}
+.oc-perks{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.oc-perk{font-size:12px;color:rgba(240,240,240,.8);display:flex;align-items:flex-start;gap:6px}
+.oc-perk span{color:var(--green)}
+.oc-price{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.price-tag{font-size:14px;font-weight:800;padding:5px 12px;border-radius:8px}
+.course .price-tag{background:rgba(123,47,255,.2);color:#c4a2ff}
+.affiliate .price-tag{background:rgba(0,200,83,.15);color:#00C853}
+.oc-divider{height:1px;background:rgba(255,255,255,.07);margin:0 18px}
+.oc-bottom{padding:16px 18px 18px}
+.oc-cta{display:block;text-align:center;font-size:15px;font-weight:800;padding:13px;border-radius:12px;border:none;cursor:pointer;width:100%;text-decoration:none}
+.course .oc-cta{background:linear-gradient(90deg,#7B2FFF,#a855f7);color:#fff}
+.affiliate .oc-cta{background:linear-gradient(90deg,#00C853,#00e676);color:#000}
+.tool .oc-cta{background:linear-gradient(90deg,#0288d1,#29B6F6);color:#fff}
+.oc-secondary{display:block;text-align:center;font-size:13px;color:var(--muted);padding:10px;cursor:pointer;text-decoration:none}
 
-/* ── Loading / empty states ── */
-.spinner { display: flex; justify-content: center; padding: 48px; }
-.spinner-ring { width: 36px; height: 36px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .7s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
-.empty { text-align: center; padding: 48px 24px; color: var(--muted); }
-.empty-icon { font-size: 40px; margin-bottom: 12px; }
+/* ── Article view overlay ── */
+.article-view{display:none;position:fixed;inset:0;background:var(--bg);z-index:200;overflow-y:auto}
+.article-view.open{display:block}
+.av-header{position:sticky;top:0;background:rgba(15,15,19,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:14px 16px;display:flex;align-items:center;gap:12px}
+.av-back{background:var(--card);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:6px 12px;font-size:14px;cursor:pointer}
+.av-title-short{font-size:15px;font-weight:600;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.av-img{width:100%;max-height:240px;object-fit:cover;display:block}
+.av-body{padding:20px 16px 80px}
+.av-tag{display:inline-block;background:var(--tag-bg);color:var(--tag-color);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-bottom:12px}
+.av-h1{font-size:22px;font-weight:800;line-height:1.3;margin-bottom:16px;letter-spacing:-.02em}
+.av-excerpt{font-size:15px;color:rgba(240,240,240,.8);line-height:1.7;margin-bottom:24px}
+.av-cta{display:block;background:var(--accent);color:#fff;text-align:center;text-decoration:none;padding:14px;border-radius:12px;font-size:16px;font-weight:700;margin-bottom:12px}
+.av-earn{display:block;background:rgba(245,166,35,.15);color:var(--gold);text-align:center;border:1px solid rgba(245,166,35,.3);padding:12px;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;margin-bottom:12px}
+.av-share{display:block;background:var(--card);color:var(--text);text-align:center;border:1px solid var(--border);padding:12px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer}
 
-/* ── Article view ── */
-.article-view { display: none; position: fixed; inset: 0; background: var(--bg); z-index: 200; overflow-y: auto; }
-.article-view.open { display: block; }
-.av-header { position: sticky; top: 0; background: rgba(15,15,19,.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
-.av-back { background: var(--card); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 6px 12px; font-size: 14px; cursor: pointer; }
-.av-title-short { font-size: 15px; font-weight: 600; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.av-img { width: 100%; max-height: 240px; object-fit: cover; display: block; }
-.av-body { padding: 20px 16px; }
-.av-tag { display: inline-block; background: var(--tag-bg); color: var(--tag-color); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; margin-bottom: 12px; }
-.av-h1 { font-size: 22px; font-weight: 800; line-height: 1.3; margin-bottom: 16px; letter-spacing: -.02em; }
-.av-excerpt { font-size: 15px; color: rgba(240,240,240,.8); line-height: 1.7; margin-bottom: 24px; }
-.av-cta { display: block; background: var(--accent); color: #fff; text-align: center; text-decoration: none; padding: 14px; border-radius: 12px; font-size: 16px; font-weight: 700; margin-bottom: 24px; }
-.av-share { display: block; background: var(--card); color: var(--text); text-align: center; border: 1px solid var(--border); padding: 12px; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer; }
+/* ── Spinner / empty ── */
+.spinner{display:flex;justify-content:center;padding:48px}
+.spinner-ring{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.empty{text-align:center;padding:48px 24px;color:var(--muted)}
+.empty-icon{font-size:40px;margin-bottom:12px}
 </style>
 </head>
 <body>
@@ -117,12 +139,14 @@ html, body { background: var(--bg); color: var(--text); font-family: -apple-syst
     <h1 class="av-h1" id="avTitle"></h1>
     <p class="av-excerpt" id="avExcerpt"></p>
     <a class="av-cta" id="avCta" href="#" target="_blank">Read Full Article →</a>
-    <button class="av-share" onclick="shareBot()">📤 Share ScaleUp AI with a friend</button>
+    <button class="av-earn" onclick="showEarnPage()">💰 Earn money with your phone →</button>
+    <button class="av-share" onclick="shareBot()">📤 Share ScaleUp AI</button>
   </div>
 </div>
 
 <!-- Main app -->
 <div id="mainApp">
+
   <div class="header">
     <div class="header-logo">
       <div class="logo-icon">⚡</div>
@@ -134,18 +158,43 @@ html, body { background: var(--bg); color: var(--text); font-family: -apple-syst
     <button class="share-btn" onclick="shareBot()">Share ↗</button>
   </div>
 
-  <div class="cats" id="cats">
-    <div class="cat active" data-cat="all">All</div>
-    <div class="cat" data-cat="AI Tools">AI Tools</div>
-    <div class="cat" data-cat="AI Business">Business</div>
-    <div class="cat" data-cat="Ecommerce">Ecommerce</div>
-    <div class="cat" data-cat="Marketing">Marketing</div>
-    <div class="cat" data-cat="SEO">SEO</div>
+  <!-- Articles page -->
+  <div class="page active" id="pageArticles">
+    <div class="cats" id="cats">
+      <div class="cat active" data-cat="all">All</div>
+      <div class="cat" data-cat="AI Tools">AI Tools</div>
+      <div class="cat" data-cat="AI Business">Business</div>
+      <div class="cat" data-cat="Ecommerce">Ecommerce</div>
+      <div class="cat" data-cat="Marketing">Marketing</div>
+      <div class="cat" data-cat="SEO">SEO</div>
+    </div>
+    <div class="feed" id="feed">
+      <div class="spinner"><div class="spinner-ring"></div></div>
+    </div>
   </div>
 
-  <div class="feed" id="feed">
-    <div class="spinner"><div class="spinner-ring"></div></div>
+  <!-- Earn page -->
+  <div class="page" id="pageEarn">
+    <div class="earn-header">
+      <h2>💰 Earn Online</h2>
+      <p>Courses, tools &amp; affiliate programs by Osoba Kehinde</p>
+    </div>
+    <div class="earn-feed" id="earnFeed"></div>
   </div>
+
+  <!-- Bottom nav -->
+  <nav class="nav">
+    <div class="nav-btn active" id="navArticles" onclick="switchPage('articles')">
+      <span class="ni">📰</span>Articles
+    </div>
+    <div class="nav-btn earn-btn" id="navEarn" onclick="switchPage('earn')">
+      <span class="ni">💰</span>Earn
+    </div>
+    <div class="nav-btn" onclick="shareBot()">
+      <span class="ni">📤</span>Share
+    </div>
+  </nav>
+
 </div>
 
 <script>
@@ -153,14 +202,150 @@ const tg = window.Telegram?.WebApp;
 if (tg) { tg.ready(); tg.expand(); }
 
 const WP_API  = 'https://scaleupai.online/wp-json/wp/v2/posts?_embed&per_page=30&orderby=date&order=desc&status=publish';
-const BOT_URL = 'https://t.me/ScaleUpAIBot'; // update to actual bot username
+const BOT_URL = 'https://t.me/ScaleupAI_bot';
+const MONETAG_ZONE = '11337001';
 
 let allPosts = [];
 let articlesRead = 0;
-let adShownAt   = 0;
-const AD_EVERY  = 3; // show rewarded ad every 3 articles opened
+let adShownAt = 0;
+const AD_EVERY = 3;
+const PROMO_EVERY = 5; // inject promo card every N articles
 
-const MONETAG_ZONE = '11337001';
+// ── Offer data ─────────────────────────────────────────────────────────────
+
+const OFFERS = [
+  {
+    type: 'course',
+    badge: '🎓 Course',
+    title: 'CPA Academy',
+    body: 'Want to earn $100 to $1k+ online? CPA Academy teaches you the exact methods 200+ students are using to generate consistent income — using just their phone or laptop.',
+    perks: [
+      '9 modules covering every major CPA network',
+      'Live classes with direct support',
+      'Works on smartphones and laptop',
+      'Results in as little as 21 days',
+    ],
+    prices: ['₦26,500 (Nigeria)', '$20 (International)'],
+    cta: 'Enroll Now →',
+    ctaUrl: 'https://www.osobakehinde.online',
+    secondary: null,
+  },
+  {
+    type: 'course',
+    badge: '🎬 Course',
+    title: 'Faceless YouTube Blueprint',
+    body: "Nigeria's #1 faceless YouTube course. Build a profitable YouTube channel without showing your face — using AI tools and proven systems.",
+    perks: [
+      'Full step-by-step faceless channel setup',
+      'AI content creation workflow',
+      'Monetisation strategies that work in Nigeria',
+      'Lifetime access + updates',
+    ],
+    prices: [],
+    cta: 'Get Access →',
+    ctaUrl: 'https://cpastores.osobakehinde.online/faceless',
+    secondary: null,
+  },
+  {
+    type: 'affiliate',
+    badge: '🤝 Affiliate',
+    title: 'Earn ₦5,300 Per Sale — CPA Academy',
+    body: 'Join the CPA Academy affiliate program. Just share your unique link — earn ₦5,300 automatically paid to your bank account on every sale. No selling required.',
+    perks: [
+      'Automatic bank transfer on every sale',
+      'Unique tracking link provided instantly',
+      'No experience needed',
+      'Promote to anyone with a phone or laptop',
+    ],
+    prices: ['₦5,300 per sale'],
+    cta: 'Join Affiliate Program →',
+    ctaUrl: 'https://www.osobakehinde.online/cpa-marketing-affiliate-registration/',
+    secondary: null,
+  },
+  {
+    type: 'affiliate',
+    badge: '🎬 Affiliate',
+    title: 'Earn ₦4,300 Per Sale — YouTube Blueprint',
+    body: 'Promote the Faceless YouTube Blueprint and earn ₦4,300 per sale — paid directly to your bank account. Share your link anywhere.',
+    perks: [
+      'Automatic bank payment per sale',
+      'High-converting sales page does the work',
+      'Share on WhatsApp, Telegram, social media',
+    ],
+    prices: ['₦4,300 per sale'],
+    cta: 'Join Affiliate Program →',
+    ctaUrl: 'https://cpastores.osobakehinde.online/youtube-automation-affiliates/',
+    secondary: null,
+  },
+  {
+    type: 'tool',
+    badge: '🛠 AI Tool',
+    title: 'TubeStack',
+    body: 'The all-in-one YouTube growth stack — AI-powered tools for scripting, SEO, thumbnail ideas, and more. Built for creators who want results faster.',
+    perks: [
+      'AI script & title generator',
+      'YouTube SEO toolkit',
+      'Thumbnail concept builder',
+      'Built for faceless creators',
+    ],
+    prices: [],
+    cta: 'Try TubeStack →',
+    ctaUrl: 'https://tubestack.online',
+    secondary: null,
+  },
+];
+
+// ── Page switching ──────────────────────────────────────────────────────────
+
+function switchPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  if (name === 'articles') {
+    document.getElementById('pageArticles').classList.add('active');
+    document.getElementById('navArticles').classList.add('active');
+  } else {
+    document.getElementById('pageEarn').classList.add('active');
+    document.getElementById('navEarn').classList.add('active');
+    renderEarn();
+  }
+}
+
+function showEarnPage() {
+  closeArticle();
+  setTimeout(() => switchPage('earn'), 100);
+}
+
+// ── Earn page renderer ──────────────────────────────────────────────────────
+
+let earnRendered = false;
+function renderEarn() {
+  if (earnRendered) return;
+  earnRendered = true;
+  const feed = document.getElementById('earnFeed');
+  OFFERS.forEach(o => {
+    const div = document.createElement('div');
+    div.className = 'offer-card ' + o.type;
+    const perksHtml = o.perks.map(p => `<div class="oc-perk"><span>✅</span>${p}</div>`).join('');
+    const pricesHtml = o.prices.length
+      ? `<div class="oc-price">${o.prices.map(p => `<span class="price-tag">${p}</span>`).join('')}</div>`
+      : '';
+    div.innerHTML = `
+      <div class="oc-top">
+        <span class="oc-badge">${o.badge}</span>
+        <div class="oc-title">${o.title}</div>
+        <div class="oc-body">${o.body}</div>
+        <div class="oc-perks">${perksHtml}</div>
+        ${pricesHtml}
+      </div>
+      <div class="oc-divider"></div>
+      <div class="oc-bottom">
+        <a class="oc-cta" href="${o.ctaUrl}" target="_blank">${o.cta}</a>
+      </div>`;
+    feed.appendChild(div);
+  });
+}
+
+// ── Article feed ────────────────────────────────────────────────────────────
 
 function inferCategory(title) {
   const t = title.toLowerCase();
@@ -182,6 +367,33 @@ function timeAgo(dateStr) {
   return Math.floor(diff/86400) + 'd ago';
 }
 
+// Rotating promo snippets injected into the article feed
+const FEED_PROMOS = [
+  { badge:'💰 Earn Online', title:'Make $100–$1k+ with CPA Marketing', sub:'200+ students already doing it. Join CPA Academy and get results in 21 days.', url:'https://www.osobakehinde.online' },
+  { badge:'🎬 Earn ₦4,300/sale', title:'Promote the Faceless YouTube Blueprint', sub:'Share one link. Earn ₦4,300 per sale, paid to your bank account automatically.', url:'https://cpastores.osobakehinde.online/youtube-automation-affiliates/' },
+  { badge:'🤝 Affiliate', title:'Earn ₦5,300 per sale — CPA Academy', sub:'No experience needed. Just share your link and collect your commission.', url:'https://www.osobakehinde.online/cpa-marketing-affiliate-registration/' },
+  { badge:'🛠 AI Tool', title:'TubeStack — Grow Your YouTube Faster', sub:'AI scripts, SEO, thumbnails. Built for faceless creators.', url:'https://tubestack.online' },
+];
+let promoIdx = 0;
+
+function makePromoCard() {
+  const p = FEED_PROMOS[promoIdx % FEED_PROMOS.length];
+  promoIdx++;
+  const div = document.createElement('div');
+  div.className = 'promo-card';
+  div.innerHTML = `
+    <span class="pc-badge">${p.badge}</span>
+    <div class="pc-title">${p.title}</div>
+    <div class="pc-sub">${p.sub}</div>
+    <button class="pc-btn" onclick="openLink('${p.url}')">Learn More →</button>`;
+  return div;
+}
+
+function openLink(url) {
+  if (tg) tg.openLink(url);
+  else window.open(url, '_blank');
+}
+
 function renderFeed(posts) {
   const feed = document.getElementById('feed');
   if (!posts.length) {
@@ -189,21 +401,21 @@ function renderFeed(posts) {
     return;
   }
   feed.innerHTML = '';
+  promoIdx = 0;
   posts.forEach((post, i) => {
     const title   = stripHtml(post.title.rendered);
     const excerpt = stripHtml(post.excerpt.rendered).substring(0, 120);
     const img     = post._embedded?.['wp:featuredmedia']?.[0]?.source_url || '';
     const cat     = inferCategory(title);
     const date    = timeAgo(post.date);
-    const featured = i === 0;
 
-    // Insert reward banner every AD_EVERY cards
-    if (i > 0 && i % AD_EVERY === 0) {
-      feed.appendChild(makeRewardBanner());
-    }
+    // Monetag reward banner every AD_EVERY cards
+    if (i > 0 && i % AD_EVERY === 0) feed.appendChild(makeRewardBanner());
+    // Promo card every PROMO_EVERY cards (offset so it doesn't clash with reward banner)
+    if (i > 0 && i % PROMO_EVERY === 0) feed.appendChild(makePromoCard());
 
     const card = document.createElement('div');
-    card.className = 'card' + (featured ? ' featured' : '');
+    card.className = 'card' + (i === 0 ? ' featured' : '');
     card.innerHTML = `
       ${img ? `<img class="card-img" src="${img}" alt="" loading="lazy" onerror="this.style.display='none'">` : ''}
       <div class="card-body">
@@ -233,18 +445,16 @@ function makeRewardBanner() {
 
 function showRewardedAd(banner) {
   if (MONETAG_ZONE && window.show_9279915) {
-    // Monetag rewarded popup SDK call
     window.show_9279915(MONETAG_ZONE).then(() => {
       if (banner) banner.remove();
       tg?.showAlert?.('✅ Unlocked! Keep reading.');
-    }).catch(() => {
-      if (banner) banner.remove();
-    });
+    }).catch(() => { if (banner) banner.remove(); });
   } else {
-    // SDK not yet configured — just dismiss
     if (banner) banner.remove();
   }
 }
+
+// ── Article view ────────────────────────────────────────────────────────────
 
 function openArticle(post) {
   const title   = stripHtml(post.title.rendered);
@@ -261,52 +471,44 @@ function openArticle(post) {
   if (img) { avImg.src = img; avImg.style.display = 'block'; } else { avImg.style.display = 'none'; }
 
   document.getElementById('articleView').classList.add('open');
-  document.getElementById('mainApp').style.overflow = 'hidden';
-
   tg?.BackButton?.show?.();
   tg?.BackButton?.onClick?.(() => closeArticle());
 
   articlesRead++;
   if (articlesRead - adShownAt >= AD_EVERY) {
     adShownAt = articlesRead;
-    setTimeout(() => showRewardedAd(null), 2000);
+    setTimeout(() => showRewardedAd(null), 2500);
   }
 }
 
 function closeArticle() {
   document.getElementById('articleView').classList.remove('open');
-  document.getElementById('mainApp').style.overflow = '';
   tg?.BackButton?.hide?.();
 }
 
 function shareBot() {
-  const text = encodeURIComponent('🤖 ScaleUp AI — AI tools, strategies & insights for modern professionals. Check it out!');
+  const text = encodeURIComponent('⚡ ScaleUp AI — AI tools, strategies & insights. Plus learn how to earn online. Check it out!');
   const url  = encodeURIComponent(BOT_URL);
-  if (tg) {
-    tg.openTelegramLink(`https://t.me/share/url?url=${url}&text=${text}`);
-  } else {
-    window.open(`https://t.me/share/url?url=${url}&text=${text}`, '_blank');
-  }
+  if (tg) tg.openTelegramLink(`https://t.me/share/url?url=${url}&text=${text}`);
+  else window.open(`https://t.me/share/url?url=${url}&text=${text}`, '_blank');
 }
 
-// Category filter
+// ── Category filter ─────────────────────────────────────────────────────────
+
 document.getElementById('cats').addEventListener('click', e => {
   const btn = e.target.closest('.cat');
   if (!btn) return;
   document.querySelectorAll('.cat').forEach(c => c.classList.remove('active'));
   btn.classList.add('active');
   const cat = btn.dataset.cat;
-  const filtered = cat === 'all' ? allPosts : allPosts.filter(p => inferCategory(stripHtml(p.title.rendered)) === cat);
-  renderFeed(filtered);
+  renderFeed(cat === 'all' ? allPosts : allPosts.filter(p => inferCategory(stripHtml(p.title.rendered)) === cat));
 });
 
-// Fetch posts
+// ── Boot ────────────────────────────────────────────────────────────────────
+
 fetch(WP_API)
   .then(r => r.json())
-  .then(posts => {
-    allPosts = posts;
-    renderFeed(posts);
-  })
+  .then(posts => { allPosts = posts; renderFeed(posts); })
   .catch(() => {
     document.getElementById('feed').innerHTML =
       '<div class="empty"><div class="empty-icon">⚠️</div><p>Could not load articles.<br>Check your connection.</p></div>';
