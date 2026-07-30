@@ -1,5 +1,23 @@
 [
   {
+    "title": "AI Backend Development",
+    "image": "https://eninla2.github.io/scaleupai-pages/images/pin-ai-backend-development.png",
+    "page": "posts/ai-backend-development.html",
+    "date": "2026-07-30T09:43:00.923Z"
+  },
+  {
+    "title": "AI Dashboard Software: Myths Debunked",
+    "image": "https://eninla2.github.io/scaleupai-pages/images/pin-ai-dashboard-software-myths-debunked.png",
+    "page": "posts/ai-dashboard-software-myths-debunked.html",
+    "date": "2026-07-30T09:42:36.095Z"
+  },
+  {
+    "title": "Business Planning Tools",
+    "image": "https://eninla2.github.io/scaleupai-pages/images/pin-business-planning-tools.png",
+    "page": "posts/business-planning-tools.html",
+    "date": "2026-07-30T09:42:21.879Z"
+  },
+  {
     "title": "Boosting Productivity with AI Chatbots",
     "image": "https://eninla2.github.io/scaleupai-pages/images/pin-boosting-productivity-with-ai-chatbots.png",
     "page": "posts/boosting-productivity-with-ai-chatbots.html",
@@ -580,23 +598,5 @@
     "image": "https://eninla2.github.io/scaleupai-pages/images/pin-self-expression-nail-art-trends.png",
     "page": "posts/self-expression-nail-art-trends.html",
     "date": "2026-07-17T10:15:54.903Z"
-  },
-  {
-    "title": "Aesthetic Mood Board Ideas to Inspire Creativity",
-    "image": "https://images.pexels.com/photos/26892064/pexels-photo-26892064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "page": "posts/aesthetic-mood-board-ideas-to-inspire-creativity.html",
-    "date": "2026-07-17T10:15:37.805Z"
-  },
-  {
-    "title": "Aesthetic Mood Board Ideas for Creative Projects",
-    "image": "https://eninla2.github.io/scaleupai-pages/images/pin-aesthetic-mood-board-ideas-for-creative-projects.png",
-    "page": "posts/aesthetic-mood-board-ideas-for-creative-projects.html",
-    "date": "2026-07-17T10:14:57.468Z"
-  },
-  {
-    "title": "Aesthetic Mood Boards Evolve Personal Style",
-    "image": "https://eninla2.github.io/scaleupai-pages/images/pin-aesthetic-mood-boards-evolve-personal-style.png",
-    "page": "posts/aesthetic-mood-boards-evolve-personal-style.html",
-    "date": "2026-07-17T10:14:41.817Z"
   }
 ]
