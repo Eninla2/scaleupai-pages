@@ -1,0 +1,75 @@
+{
+  "cookies": [
+    {
+      "name": "csrftoken",
+      "value": "1c3c442d6e8cd31dc5d3ec0cfefc2116",
+      "domain": "www.pinterest.com",
+      "path": "/",
+      "expires": 1817718442.400369,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_pinterest_sess",
+      "value": "TWc9PSZsRkRXQ253OExRWjlhdGUzR3JQMmdVY2FLeld4WllvZG5meTBnd0tSejhkcXV6dy9lMnllTERzZUJCQnRWN3dtdFlMK1NjbUU3TkM4aDN6cW5MQXhHVmY2OWVPWlZ5cUlRRjlQNW93aHp1UT0mUU1hdEdram1BeHhMUVR3VnJsazY3bjM4TGlVPQ==",
+      "domain": ".pinterest.com",
+      "path": "/",
+      "expires": 1817286442.401749,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_auth",
+      "value": "0",
+      "domain": ".pinterest.com",
+      "path": "/",
+      "expires": 1817286442.401864,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_routing_id",
+      "value": "\"c7bf9b87-c8fe-4ed3-9db0-1cde1621b25e\"",
+      "domain": "www.pinterest.com",
+      "path": "/",
+      "expires": 1786268842.401944,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sessionFunnelEventLogged",
+      "value": "1",
+      "domain": "www.pinterest.com",
+      "path": "/",
+      "expires": 1786225645,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "g_state",
+      "value": "{\"i_l\":0,\"i_ll\":1786182446163,\"i_b\":\"yR9UaLP3e2BCWg0BiVjOe9gK1LgA3m/Ynp08KUxAqUg\",\"i_e\":{\"enable_itp_optimization\":24},\"i_et\":1786182446163}",
+      "domain": "www.pinterest.com",
+      "path": "/",
+      "expires": 1801734446,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ir",
+      "value": "0",
+      "domain": "okra.pinterest.com",
+      "path": "/",
+      "expires": 1786184247.397642,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "timestamp": "2026-08-08T09:47:39.725Z"
+}
