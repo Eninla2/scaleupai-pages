@@ -2,20 +2,20 @@
   "cookies": [
     {
       "name": "csrftoken",
-      "value": "94b7932d8d05791a91b558a11b2df27d",
+      "value": "2a2a98d379626d174fb46468007a429c",
       "domain": "www.pinterest.com",
       "path": "/",
-      "expires": 1818587945.372635,
+      "expires": 1818588087.049176,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "_pinterest_sess",
-      "value": "TWc9PSZsMkxtM2F3alZtR2lOOC9OMFZFbjdkd0lwRzlRNnRNWkFuU0NvSEQ3SisxUkk3T0RaWUkyU3V0TVZTaGVmN0JseU1oNXpLTHVBYWRpaEN4eGFHajArWjByNTZqMkdUYlg0bFAyUzVRVTFxQT0mUXQvUzhxaGI1N0RVMmdNUWZ5bUJSYTBPakowPQ==",
+      "value": "TWc9PSZrM0xadUZKcUNpTFRUaDRVS09YMVJydXVHZGYyYzltaS83bGJzd2tZTFlpL2M5VW90Y09iVmlEMTZ4TUlHS3ZiZ2JCeE1KRUl3ak55SWVtejJXTHFEMzd4WUwxNVBkWkRJSVhwSmFEcm1jUT0mNlNNWFBoWHpUQUZVb0o4R0RnSzlTbGpQNDhjPQ==",
       "domain": ".pinterest.com",
       "path": "/",
-      "expires": 1818155946.373953,
+      "expires": 1818156087.050475,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
@@ -25,17 +25,17 @@
       "value": "0",
       "domain": ".pinterest.com",
       "path": "/",
-      "expires": 1818155946.374078,
+      "expires": 1818156087.050624,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "_routing_id",
-      "value": "\"c65c9f6a-5606-46aa-b284-b70e13adf6eb\"",
+      "value": "\"f794a9ad-3649-4d3b-92dd-8ada536a7358\"",
       "domain": "www.pinterest.com",
       "path": "/",
-      "expires": 1787138346.374201,
+      "expires": 1787138488.050735,
       "httpOnly": true,
       "secure": false,
       "sameSite": "Lax"
@@ -45,17 +45,17 @@
       "value": "1",
       "domain": "www.pinterest.com",
       "path": "/",
-      "expires": 1787095149,
+      "expires": 1787095290,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "g_state",
-      "value": "{\"i_l\":0,\"i_ll\":1787051949393,\"i_b\":\"I5mvLdbyj5vnftKoV10icYZks/XM2ZV04ES1ETWvO6o\",\"i_e\":{\"enable_itp_optimization\":24},\"i_et\":1787051949393}",
+      "value": "{\"i_l\":0,\"i_ll\":1787052090672,\"i_b\":\"o7N877jTTj8hIaQtd7nzmHuI/SeLqBWz08x6N5qC28U\",\"i_e\":{\"enable_itp_optimization\":24},\"i_et\":1787052090672}",
       "domain": "www.pinterest.com",
       "path": "/",
-      "expires": 1802603949,
+      "expires": 1802604090,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -65,11 +65,11 @@
       "value": "0",
       "domain": "okra.pinterest.com",
       "path": "/",
-      "expires": 1787053749.761916,
+      "expires": 1787053892.038497,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     }
   ],
-  "timestamp": "2026-08-18T11:19:23.659Z"
+  "timestamp": "2026-08-18T11:21:44.818Z"
 }
