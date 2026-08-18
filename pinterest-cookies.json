@@ -2,20 +2,20 @@
   "cookies": [
     {
       "name": "csrftoken",
-      "value": "d5787c28db3fc938a5fbb32282c07621",
+      "value": "94b7932d8d05791a91b558a11b2df27d",
       "domain": "www.pinterest.com",
       "path": "/",
-      "expires": 1818587760.761701,
+      "expires": 1818587945.372635,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "_pinterest_sess",
-      "value": "TWc9PSZlZThtK2tUVW9lM1ZSWCtSZlRsbzd1QjVTZWx4VGdyUE56ZTc5dTZmSFdyYkVnZVg3TGd5eCtLdDNnUHpPT1ZuSXhpQnFiZzZWQkxEU0phM1U5Rk1TV1JvL2dnZzdNa1JnUGE4N3ZIWmJBND0mUTNLd0FYbmpkOW40a3E4MHU3eHFyNGVPMk80PQ==",
+      "value": "TWc9PSZsMkxtM2F3alZtR2lOOC9OMFZFbjdkd0lwRzlRNnRNWkFuU0NvSEQ3SisxUkk3T0RaWUkyU3V0TVZTaGVmN0JseU1oNXpLTHVBYWRpaEN4eGFHajArWjByNTZqMkdUYlg0bFAyUzVRVTFxQT0mUXQvUzhxaGI1N0RVMmdNUWZ5bUJSYTBPakowPQ==",
       "domain": ".pinterest.com",
       "path": "/",
-      "expires": 1818155760.763249,
+      "expires": 1818155946.373953,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
@@ -25,17 +25,17 @@
       "value": "0",
       "domain": ".pinterest.com",
       "path": "/",
-      "expires": 1818155760.763428,
+      "expires": 1818155946.374078,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "_routing_id",
-      "value": "\"993ffa4a-a712-4f24-8de6-19b918ca4ac2\"",
+      "value": "\"c65c9f6a-5606-46aa-b284-b70e13adf6eb\"",
       "domain": "www.pinterest.com",
       "path": "/",
-      "expires": 1787138160.763525,
+      "expires": 1787138346.374201,
       "httpOnly": true,
       "secure": false,
       "sameSite": "Lax"
@@ -45,9 +45,19 @@
       "value": "1",
       "domain": "www.pinterest.com",
       "path": "/",
-      "expires": 1787094962,
+      "expires": 1787095149,
       "httpOnly": false,
       "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "g_state",
+      "value": "{\"i_l\":0,\"i_ll\":1787051949393,\"i_b\":\"I5mvLdbyj5vnftKoV10icYZks/XM2ZV04ES1ETWvO6o\",\"i_e\":{\"enable_itp_optimization\":24},\"i_et\":1787051949393}",
+      "domain": "www.pinterest.com",
+      "path": "/",
+      "expires": 1802603949,
+      "httpOnly": false,
+      "secure": false,
       "sameSite": "Lax"
     },
     {
@@ -55,21 +65,11 @@
       "value": "0",
       "domain": "okra.pinterest.com",
       "path": "/",
-      "expires": 1787053562.798302,
+      "expires": 1787053749.761916,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
-    },
-    {
-      "name": "g_state",
-      "value": "{\"i_l\":0,\"i_ll\":1787051762836,\"i_b\":\"O7WdcU9pEy09HH38YllpHBrm/aK9auAr2Crsi54p+fQ\",\"i_e\":{\"enable_itp_optimization\":24},\"i_et\":1787051762836}",
-      "domain": "www.pinterest.com",
-      "path": "/",
-      "expires": 1802603762,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
     }
   ],
-  "timestamp": "2026-08-18T11:16:17.843Z"
+  "timestamp": "2026-08-18T11:19:23.659Z"
 }
